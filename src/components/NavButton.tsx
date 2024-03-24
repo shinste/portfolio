@@ -16,6 +16,7 @@ const NavButton: React.FC<ButtonProps> =  ({name, button, setButton, handleButto
                                                                                                                 '&:active': {
                                                                                                                     backgroundColor: '#F5E186', // Background color when clicked
                                                                                                                 },
+                                                                                                                boxShadow: 'none',
                                                                                                                 color: 'black',
                                                                                                                 margin: 2,
                                                                                                                 width: '9rem',

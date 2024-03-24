@@ -6,7 +6,7 @@ import { Button } from '@mui/material';
 
 const panelStyle: React.CSSProperties = {
     backgroundColor: '#FDF8DF', 
-    height: '30rem',
+    height: '20rem',
     width:'20rem', 
     margin: '2rem', 
     borderRadius: 12,
@@ -21,30 +21,37 @@ const panelStyle: React.CSSProperties = {
 
 const Contact = () => {
     return (
-        <div className="Flex" style={{justifyContent: 'space-evenly', width: '80%', margin: 'auto', marginTop: '10rem'}}>
-            <div style={{...panelStyle}}>
-                <img style={{...logoStyle}} src={phone} />
-                <h2 style={{textAlign: 'center'}}>360-790-6401</h2>
+        <div>
+            <div style={{width: '70rem', marginLeft: 'auto', marginRight: 'auto', marginTop: '10rem'}}>
+                <h3 style={{color: 'black', fontSize: '60px', marginBottom: -2}}>Contact</h3>
+                <hr style={{width: '13.5rem', borderColor: '#F5E186', borderWidth: 2, borderStyle: 'solid', marginLeft: 0, marginBottom: '2rem'}}/>
             </div>
-            <div style={{...panelStyle}}>
-                <img style={{...logoStyle}} src={envelop} />
-                <h3 style={{textAlign: 'center'}}>stephenshin1@hotmail.com</h3>
-            </div>
-            <div style={{...panelStyle}}>
-                <img style={{...logoStyle}} src={github} />
-                <a href="https://github.com/shinste/" style={{ textDecoration: 'none' }}>
-                    <Button style={{...logoStyle}} variant='contained' sx={{backgroundColor: '#F5E186'}}>
-                        Visit
-                    </Button>
-                </a>
-            </div>
-            <div style={{...panelStyle}}>
-                <img style={{...logoStyle}} src={linkedin} />
-                <a href="https://www.linkedin.com/feed/" style={{ textDecoration: 'none' }}>
-                    <Button style={{...logoStyle}} variant='contained' sx={{backgroundColor: '#F5E186'}}>
-                        Visit
-                    </Button>
-                </a>
+            
+            <div className="Flex" style={{justifyContent: 'space-evenly', width: '80%', margin: 'auto', marginTop: '10rem'}}>
+                <div style={{...panelStyle}}>
+                    <img style={{...logoStyle}} src={phone} />
+                    <h2 style={{textAlign: 'center'}}>360-790-6401</h2>
+                </div>
+                <div style={{...panelStyle}}>
+                    <img style={{...logoStyle}} src={envelop} />
+                    <h3 style={{textAlign: 'center'}}>stephenshin1@hotmail.com</h3>
+                </div>
+                <div style={{...panelStyle}}>
+                    <img style={{...logoStyle}} src={github} />
+                    <a href="https://github.com/shinste/" target="_blank" style={{ textDecoration: 'none' }}>
+                        <Button style={{...logoStyle}} variant='contained' sx={{backgroundColor: '#F5E186', boxShadow: '3px 3px 5px 0px grey'}}>
+                            Visit
+                        </Button>
+                    </a>
+                </div>
+                <div style={{...panelStyle}}>
+                    <img style={{...logoStyle}} src={linkedin} />
+                    <a href="https://www.linkedin.com/feed/" target="_blank" style={{ textDecoration: 'none' }}>
+                        <Button style={{...logoStyle}} variant='contained' sx={{backgroundColor: '#F5E186', boxShadow: '3px 3px 5px 0px grey'}}>
+                            Visit
+                        </Button>
+                    </a>
+                </div>
             </div>
         </div>
     );

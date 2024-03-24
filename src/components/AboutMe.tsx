@@ -19,8 +19,8 @@ import portrait from '../logos/portrait.jpg'
 const AboutMe = () => {
     return (
         <div style={{marginTop: '10rem', width: '70rem', marginLeft: 'auto', marginRight: 'auto'}}>
-            <h3 style={{color: '#FFFFFF', fontSize: '60px', marginTop: -10, marginBottom: -2}}>About Me</h3>
-            <hr style={{width: '17.5rem', borderColor: '#F5E186', borderStyle: 'solid', marginLeft: 0, marginBottom: '2rem'}}/>
+            <h3 style={{color: 'black', fontSize: '60px', marginTop: -10, marginBottom: -2}}>About Me</h3>
+            <hr style={{width: '17.5rem', borderColor: '#F5E186', borderStyle: 'solid', borderWidth: 2, marginLeft: 0, marginBottom: '2rem'}}/>
             <div className="Flex" style={{'marginBottom': '5rem'}}>
                 <div>
                     <img style={{height: '300px', margin: '3rem', marginLeft: 0, borderRadius: 12}} src={portrait} />
@@ -35,7 +35,7 @@ const AboutMe = () => {
                 </div>
             </div>
 
-            <h3 style={{color: '#FFFFFF', fontSize: '30px', marginBottom: -2}}>Tech Stack</h3>
+            <h3 style={{color: 'black', fontSize: '30px', marginBottom: -2}}>Tech Stack</h3>
             <hr style={{width: '9rem', borderColor: '#F5E186', borderStyle: 'solid', marginLeft: 0, marginBottom: '2rem'}}/>
 
             <Typography m={1} sx={{color: '#8B8B8B', marginLeft: 0}}>Languages</Typography>

@@ -124,7 +124,7 @@ function App() {
         <hr ref={componentRefs['Contact']} style={{...hrStyle}}/>
         <Contact />
       </body>
-      <hr style={{borderStyle: 'none', marginTop: '13.8rem'}}/>
+      <hr style={{borderStyle: 'none', marginTop: '6.7rem'}}/>
     </div>
   );
 }

@@ -2,11 +2,18 @@ interface ImageProp {
     image: string
     rectangle?: boolean
     end? : boolean
+    small?: boolean
 }
 
-const Logo: React.FC<ImageProp> = ({image, rectangle, end}) => {
+const Logo: React.FC<ImageProp> = ({image, rectangle, end, small}) => {
 
-
+    if (small) {
+        return (
+            <div style={{padding: 0, marginRight: !end ? '3rem': 0}}>
+                <img style={{width: rectangle ? '1.5rem': '3rem', height: '3rem'}} src={image} />
+            </div>
+        );
+    }
     return (
         <div style={{padding: 10, marginRight: !end ? '3rem': 0}}>
             <img style={{width: rectangle ? '4rem': '5rem', height: '5rem'}} src={image} />

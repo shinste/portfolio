@@ -1,8 +1,24 @@
 import { Typography } from "@mui/material";
 import duck from '../logos/duck.png'
+import cloud1 from '../logos/cloud1.png'
+import cloud2 from '../logos/cloud2.png'
+import cloud3 from '../logos/cloud3.png'
+import cloud4 from '../logos/cloud4.png'
+import cloud5 from '../logos/cloud5.png'
+import cloud6 from '../logos/cloud6.png'
+import smallbird from '../logos/birdsmall.png'
 const HomePage = () => {
+
+    const panelStyle: React.CSSProperties = {
+        backgroundColor: '#FDF8DF', 
+        height: '30rem',
+        width:'20rem', 
+        margin: '2rem', 
+        borderRadius: 12,
+      };
+
     return (
-        <div style={{marginBottom: '22rem'}}>
+        <div style={{marginBottom: '19rem'}}>
             <div className="fade" style={{ position: 'absolute', width: '25rem', height: '25rem', top: '-6rem', left: '-10rem', zIndex: -1, backgroundColor: '#F5E186', borderRadius: '50%'}}>
             </div>
             <div className="slide-in" style={{ position: 'absolute', top: '12rem', left: '17rem', zIndex: -1}}>
@@ -25,17 +41,15 @@ const HomePage = () => {
                     <p className="Flex slide-in slide-delay-2" style={{fontSize: '35px'}}>I Provide&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Fullstack Solutions</span></p>
                 </div>
             </div>
-            {/* <div className="Flex-vertical" style={{marginTop: 80, color: '#404040'}}>
-                <div className="Flex slide-in" style={{marginBottom: 100, marginTop: 80}}>
-                    <Typography p={1} ml={'38vw'} >I Tailor</Typography> <div style={{backgroundColor: '#F5E186', borderRadius: 8}}><Typography p={1}>FRONTEND</Typography></div> <Typography p={1}>Interfaces</Typography>
-                </div>
-                <div className="Flex slide-in slide-delay-1" style={{marginBottom: 100}}>
-                    <Typography p={1} ml={'43.8vw'} >I Create</Typography> <div style={{backgroundColor: '#F5E186', borderRadius: 8}}><Typography p={1}>BACKEND</Typography></div> <Typography p={1}>Systems</Typography>
-                </div>
-                <div className="Flex slide-in slide-delay-2">
-                    <Typography p={1} ml={'49.5vw'} >I Provide</Typography> <div style={{backgroundColor: '#F5E186', borderRadius: 8}}><Typography p={1}>FULLSTACK</Typography></div> <Typography p={1}>Solutions</Typography>
-                </div>
-            </div> */}
+            <div className="fade">
+                <img style={{ position: 'absolute', top: '38rem', left: 0, zIndex: -1, width: '400px'}} src={cloud1}/>
+                <img style={{ position: 'absolute', top: '44rem', left: '22rem', zIndex: -1, width: '150px'}} src={cloud2}/>
+                <img style={{ position: 'absolute', top: '39rem', left: '30rem', zIndex: -1, width: '400px'}} src={cloud3}/>
+                <img style={{ position: 'absolute', top: '44rem', left: '53rem', zIndex: -1, width: '400px'}} src={cloud4}/>
+                <img style={{ position: 'absolute', top: '44rem', left: '72rem', zIndex: -1}} src={smallbird}/>
+                <img style={{ position: 'absolute', top: '41rem', left: '77.5rem', zIndex: -1, width: '420px'}} src={cloud5}/>
+                <img style={{ position: 'absolute', top: '43rem', left: '100rem', zIndex: -1, width: '300px'}} src={cloud6}/>
+            </div>
         </div>
     );
 }
