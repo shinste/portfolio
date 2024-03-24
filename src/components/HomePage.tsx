@@ -11,12 +11,12 @@ const HomePage = () => {
             </div>
             <div className='Center-text Center-horizontal fade' style={{width: '24rem', marginTop: '10rem'}}>
                 <div className='Flex'>
-                <hr style={{width: '10rem', borderColor: '#F5E186', borderStyle: 'solid', marginLeft: 25, marginRight: 160}}/>
-                <div style={{width: '1rem', height: '1rem', backgroundColor: '#F5E186', borderRadius: '50%'}}></div>
+                    <hr style={{width: '10rem', borderColor: '#F5E186', borderStyle: 'solid', marginLeft: 18, marginRight: 137}}/>
+                    <div style={{width: '1rem', height: '1rem', backgroundColor: '#F5E186', marginLeft: 6, borderRadius: '50%'}}></div>
                 </div>
-                <h3 style={{color: '#FFFFFF', fontSize: '60px', marginTop: -10, marginBottom: -2}}>Stephen Shin</h3>
+                <h3 style={{color: 'black', fontSize: '60px', marginTop: -10, marginBottom: -5}}>Stephen Shın</h3>
                 <hr style={{width: '10rem', borderColor: '#F5E186', borderStyle: 'solid', marginLeft: 210}}/>
-                <div className="Flex-center" style={{color: '#979797'}}>
+                <div className="Flex-center" style={{color: '#404040'}}>
                     <Typography mr={2} style={{fontSize: '20px'}}>Frontend</Typography>
                     <hr style={{marginLeft: 0, marginRight: 0, height: '1rem', borderStyle: 'solid', borderColor: '#FDF8DF'}}/>
                     <Typography mx={2} style={{fontSize: '20px'}}>Backend</Typography>
@@ -24,15 +24,15 @@ const HomePage = () => {
                     <Typography ml={2} style={{fontSize: '20px'}}>Fullstack</Typography>
                 </div>
             </div>
-            <div className="Flex-vertical" style={{marginTop: 80, color: '#979797'}}>
+            <div className="Flex-vertical" style={{marginTop: 80, color: '#404040'}}>
                 <div className="Flex slide-in" style={{marginBottom: 100, marginTop: 80}}>
-                    <Typography p={1} ml={'38vw'} >I Tailor</Typography> <div style={{backgroundColor: '#F5E186', borderRadius: 8}}><Typography p={1}>Frontend</Typography></div> <Typography p={1}>Interfaces</Typography>
+                    <Typography p={1} ml={'38vw'} >I Tailor</Typography> <div style={{backgroundColor: '#F5E186', borderRadius: 8}}><Typography p={1}>FRONTEND</Typography></div> <Typography p={1}>Interfaces</Typography>
                 </div>
                 <div className="Flex slide-in slide-delay-1" style={{marginBottom: 100}}>
-                    <Typography p={1} ml={'43.8vw'} >I Create</Typography> <div style={{backgroundColor: '#F5E186', borderRadius: 8}}><Typography p={1}>Backend</Typography></div> <Typography p={1}>Systems</Typography>
+                    <Typography p={1} ml={'43.8vw'} >I Create</Typography> <div style={{backgroundColor: '#F5E186', borderRadius: 8}}><Typography p={1}>BACKEND</Typography></div> <Typography p={1}>Systems</Typography>
                 </div>
                 <div className="Flex slide-in slide-delay-2">
-                    <Typography p={1} ml={'49.5vw'} >I Provide</Typography> <div style={{backgroundColor: '#F5E186', borderRadius: 8}}><Typography p={1}>FullStack</Typography></div> <Typography p={1}>Solutions</Typography>
+                    <Typography p={1} ml={'49.5vw'} >I Provide</Typography> <div style={{backgroundColor: '#F5E186', borderRadius: 8}}><Typography p={1}>FULLSTACK</Typography></div> <Typography p={1}>Solutions</Typography>
                 </div>
             </div>
         </div>

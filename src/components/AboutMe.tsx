@@ -25,12 +25,14 @@ const AboutMe = () => {
                 <div>
                     <img style={{height: '300px', margin: '3rem', marginLeft: 0, borderRadius: 12}} src={portrait} />
                 </div>
-                <Typography sx={{marginTop: '3rem', fontSize: '20px'}}>
-                    My name is Stephen! I graduated with an Economics degree at the University of Washington (Seattle), but shortly after graduation I decided to pursue
-                    my passion of coding. I started my journey only wanting to develop backend, but I've grown very fond of frontend as well! My favorite things about 
-                    coding is learning new tools to optimize my means of developing and the satisfaction of being able to see what I've created. Hobbies that I have are
-                    playing volleyball, lifting, videogames, and trying new restaurants.
-                </Typography>
+                <div style={{color: '#404040'}}>
+                    <Typography sx={{marginTop: '3rem', fontSize: '20px'}}>
+                        My name is Stephen! I graduated with an Economics degree at the University of Washington (Seattle), but shortly after graduation I decided to pursue
+                        my passion of coding. I started my journey only wanting to develop backend, but I've grown very fond of frontend as well! My favorite things about 
+                        coding is learning new tools to optimize my means of developing and the satisfaction of being able to see what I've created. Hobbies that I have are
+                        playing volleyball, lifting, videogames, and trying new restaurants.
+                    </Typography>
+                </div>
             </div>
 
             <h3 style={{color: '#FFFFFF', fontSize: '30px', marginBottom: -2}}>Tech Stack</h3>

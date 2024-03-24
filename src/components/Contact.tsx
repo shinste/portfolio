@@ -6,8 +6,8 @@ import { Button } from '@mui/material';
 
 const panelStyle: React.CSSProperties = {
     backgroundColor: '#FDF8DF', 
-    height: '50vh',
-    width:'20vw', 
+    height: '30rem',
+    width:'20rem', 
     margin: '2rem', 
     borderRadius: 12,
   };
@@ -32,15 +32,19 @@ const Contact = () => {
             </div>
             <div style={{...panelStyle}}>
                 <img style={{...logoStyle}} src={github} />
-                <Button style={{...logoStyle}} variant='contained' sx={{backgroundColor: '#F5E186'}}>
-                    Visit
-                </Button>
+                <a href="https://github.com/shinste/" style={{ textDecoration: 'none' }}>
+                    <Button style={{...logoStyle}} variant='contained' sx={{backgroundColor: '#F5E186'}}>
+                        Visit
+                    </Button>
+                </a>
             </div>
             <div style={{...panelStyle}}>
                 <img style={{...logoStyle}} src={linkedin} />
-                <Button style={{...logoStyle}} variant='contained' sx={{backgroundColor: '#F5E186'}}>
-                    Visit
-                </Button>
+                <a href="https://www.linkedin.com/feed/" style={{ textDecoration: 'none' }}>
+                    <Button style={{...logoStyle}} variant='contained' sx={{backgroundColor: '#F5E186'}}>
+                        Visit
+                    </Button>
+                </a>
             </div>
         </div>
     );

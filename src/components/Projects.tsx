@@ -12,9 +12,9 @@ const Projects = () => {
                 <hr style={{width: '14rem', borderColor: '#F5E186', borderStyle: 'solid', marginLeft: 0, marginBottom: '2rem'}}/>
             </div>
             
-            <div className="Vertical-flex" style={{backgroundColor: '#FDF8DF', width: '100%', margin: 'auto', borderRadius: 12, marginTop: '3rem', color: '#8B8B8B'}}>
+            <div className="Vertical-flex" style={{backgroundColor: '#FDF8DF', width: '100%', margin: 'auto', borderRadius: 12, marginTop: '3rem', color: '#404040'}}>
                 <div style={{margin: 'auto', width: '85%', paddingTop: '3rem'}}>
-                    <Typography >This Website</Typography>
+                    <Typography style={{fontSize: '23px'}} >This Website</Typography>
                     <div className='Flex' style={{width: '100%', marginTop: '2rem'}}>
                         <div className="Vertical-flex"> 
                             <img style={{width: '533.33px', height: '300px'}} src={portfolio} />
@@ -35,7 +35,7 @@ const Projects = () => {
                 </div>
 
                 <div style={{margin: 'auto', width: '85%', paddingTop: '3rem'}}>
-                    <Typography >Collaborative Event Planning Application</Typography>
+                    <Typography style={{fontSize: '23px'}} >Collaborative Event Planning Application</Typography>
                     <div className='Flex' style={{width: '100%', marginTop: '2rem'}}>
                         <div className="Vertical-flex"> 
                             <img style={{width: '533.33px', height: '300px'}} src={collap} />
@@ -62,7 +62,7 @@ const Projects = () => {
                 </div>
 
                 <div style={{margin: 'auto', width: '85%', paddingTop: '3rem', paddingBottom: '5rem'}}>
-                    <Typography >AI Poker Game</Typography>
+                    <Typography style={{fontSize: '23px'}} >AI Poker Game</Typography>
                     <div className='Flex' style={{width: '100%', marginTop: '2rem'}}>
                         <div className="Vertical-flex"> 
                             <img style={{width: '533.33px', height: '300px'}} src={poker} />

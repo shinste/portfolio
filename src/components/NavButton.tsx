@@ -10,10 +10,17 @@ const NavButton: React.FC<ButtonProps> =  ({name, button, setButton, handleButto
     return (
         <Button variant={button === name ? 'contained' : 'text'} onClick={() => {setButton(name)
                                                                                  handleButtonClick(name)}} sx={{backgroundColor: button === name ? '#F5E186' : null,
-                                                                                                                color: 'white',
+                                                                                                                '&:hover': {
+                                                                                                                    backgroundColor: '#F5E186', // Background color on hover
+                                                                                                                },
+                                                                                                                '&:active': {
+                                                                                                                    backgroundColor: '#F5E186', // Background color when clicked
+                                                                                                                },
+                                                                                                                color: 'black',
                                                                                                                 margin: 2,
                                                                                                                 width: '9rem',
-                                                                                                                fontSize: '18px'}}>{name}</Button>
+                                                                                                                fontSize: '18px',
+                                                                                                                }}>{name}</Button>
     );
 }
 
