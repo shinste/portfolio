@@ -36,9 +36,9 @@ const HomePage = () => {
                 
                 <hr style={{width: '18.7rem', borderColor: '#F5E186', borderStyle: 'solid', marginLeft: 210, borderWidth: 3}}/>
                 <div className="Flex-center" style={{flexDirection: 'column', color: '#404040'}}>
-                    <p className="Flex slide-in" style={{fontSize: '35px', marginTop: '5rem', marginBottom: 0}}>I Create&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Backend Systems</span></p>
-                    <p className="Flex slide-in slide-delay-1" style={{fontSize: '35px', marginBottom: 0}}>I Tailor&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Frontend Experiences</span></p>
-                    <p className="Flex slide-in slide-delay-2" style={{fontSize: '35px'}}>I Provide&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Fullstack Solutions</span></p>
+                    <p className="Flex slide-in" style={{fontSize: '35px', marginTop: '5rem', marginBottom: 0}}>I create&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Backend Systems</span></p>
+                    <p className="Flex slide-in slide-delay-1" style={{fontSize: '35px', marginBottom: 0}}>I tailor&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Frontend Experiences</span></p>
+                    <p className="Flex slide-in slide-delay-2" style={{fontSize: '35px'}}>I provide&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Fullstack Solutions</span></p>
                 </div>
             </div>
             <div className="fade">

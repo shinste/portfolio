@@ -30,7 +30,7 @@ const Contact = () => {
             <div className="Flex" style={{justifyContent: 'space-evenly', width: '80%', margin: 'auto', marginTop: '10rem'}}>
                 <div style={{...panelStyle}}>
                     <img style={{...logoStyle}} src={phone} />
-                    <h2 style={{textAlign: 'center'}}>360-790-6401</h2>
+                    <h3 style={{textAlign: 'center'}}>360-790-6401</h3>
                 </div>
                 <div style={{...panelStyle}}>
                     <img style={{...logoStyle}} src={envelop} />

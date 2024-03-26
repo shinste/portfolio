@@ -46,16 +46,6 @@ function App() {
       },
       { threshold: 0 }
     );
-  
-    const observerAbout = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          console.log('About Me section is at the top of the screen');
-          setDetectNav('About Me');
-        }
-      },
-      { threshold: 0 }
-    );
     const observerProjects = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -65,7 +55,15 @@ function App() {
       },
       { threshold: 0 }
     );
-  
+    const observerAbout = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          console.log('About Me section is at the top of the screen');
+          setDetectNav('About Me');
+        }
+      },
+      { threshold: 0 }
+    );
     const observerContact = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -79,11 +77,11 @@ function App() {
     if (componentRefs['Home'] && componentRefs['Home'].current) {
       observerHome.observe(componentRefs['Home'].current);
     }
-    if (componentRefs['About Me'] && componentRefs['About Me'].current) {
-      observerAbout.observe(componentRefs['About Me'].current);
-    }
     if (componentRefs['Projects'] && componentRefs['Projects'].current) {
       observerProjects.observe(componentRefs['Projects'].current);
+    }
+    if (componentRefs['About Me'] && componentRefs['About Me'].current) {
+      observerAbout.observe(componentRefs['About Me'].current);
     }
     if (componentRefs['Contact'] && componentRefs['Contact'].current) {
       observerContact.observe(componentRefs['Contact'].current);
@@ -113,14 +111,11 @@ function App() {
         <NavBar handleButtonClick={handleButtonClick} detectNav={detectNav}/>
       </header>
       <body>
-        
         <HomePage />
-        {/* <Button onClick={() => console.log(detectNav, 'detect')}>check</Button> */}
-        <hr ref={componentRefs['About Me']} style={{...hrStyle}}/>
-        
-        <AboutMe />
         <hr ref={componentRefs['Projects']} style={{...hrStyle}}/>
         <Projects />
+        <hr ref={componentRefs['About Me']} style={{...hrStyle}}/>
+        <AboutMe />
         <hr ref={componentRefs['Contact']} style={{...hrStyle}}/>
         <Contact />
       </body>

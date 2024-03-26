@@ -4,8 +4,6 @@ import poker from '../logos/poker.gif'
 import collap from '../logos/collap.gif'
 import react from '../logos/react.png'
 import figma from '../logos/figma.png'
-import typescript from '../logos/typescript.png'
-import github from '../logos/github.png'
 import django from '../logos/django.png'
 import openai from '../logos/openai.svg'
 import postman from '../logos/postman.png'
@@ -35,9 +33,7 @@ const Projects = () => {
                             <h3 style={{marginTop: 0}}>Portfolio Website</h3>
                             <Typography style={{fontSize: '15px'}}>
                                 Yup! This website was designed and developed by me. This is a great project that can show how easily I can produce a webpage and display
-                                all my other works at the same time. What's shown on the left is my figma design that I created and modeled this website after. I'm not 
-                                an experienced designer, but I tried very hard to make the color scheme and structure very aesthetically pleasing. If you would like to 
-                                see the code for this project, click on the button below!
+                                all my other works at the same time. What's shown on the left is my figma design that I created and modeled this website after!
                             </Typography>
                             <a href="https://github.com/shinste/portfolio/" target="_blank" style={{ textDecoration: 'none'}}>
                                 <Button variant="contained" sx={{marginLeft: 'auto', marginRight: 'auto', display: 'block', marginTop: '1rem', marginBottom: 0, backgroundColor: '#F5E186', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
@@ -63,9 +59,7 @@ const Projects = () => {
                             <h3 style={{marginTop: 0}}>Collap</h3>
                             <Typography style={{fontSize: '15px'}}>
                                 Collap is a collaborative event planning app that marks my first journey into full-stack development and framework usage. 
-                                Despite its reltiavely large scope, the project helped me fully dive into Django, React, TypeScript, RESTful APIs, and more. 
-                                While there are areas I'd refine given the opportunity, the self-learning process cemented my passion for coding. Notably, 
-                                it shockingly discovered a stronger interest in frontend development, initially intended for someone who specialized in it.
+                                Because of its reltiavely large scope, the project helped me fully dive into Django, React, TypeScript, RESTful APIs, and more. 
                             </Typography>
                             <div className="Flex-center">
                                 <a href="https://master--illustrious-unicorn-98eadd.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}>
@@ -97,8 +91,7 @@ const Projects = () => {
                             <h3 style={{marginTop: 0}}>Poker Bot</h3>
                             <Typography style={{fontSize: '15px'}}>
                                 Poker Bot is a single-page web app born from my desire to improve my poker skills while solidifying my React and TypeScript. It features a streamlined user interface 
-                                for playing against AI, seeking move recommendations, or analyzing gameplay. Handling most of the game logic on the frontend has pushed my TypeScript skills forward 
-                                as it reduces the need for frequent API calls, while also serving as my initial attempt into integrating OpenAI, sparking my interest in utilizing AI to enhance user experience.
+                                for playing against AI, seeking move recommendations, or analyzing gameplay.
                             </Typography>
                             <div className="Flex-center">
                                 <a href="https://main--pokerbot.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}>
