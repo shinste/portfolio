@@ -33,22 +33,21 @@ const HomePage = () => {
                     <h3 style={{color: 'black', fontSize: '60px', marginTop: -10, marginBottom: -5}}>Stephen Shın</h3>
                     <p style={{marginTop: '2.3rem', marginLeft: '1rem'}}>Software Engineer</p>
                 </div>
-                
                 <hr style={{width: '18.7rem', borderColor: '#F5E186', borderStyle: 'solid', marginLeft: 210, borderWidth: 3}}/>
-                <div className="Flex-center" style={{flexDirection: 'column', color: '#404040'}}>
-                    <p className="Flex slide-in" style={{fontSize: '35px', marginTop: '5rem', marginBottom: 0}}>I create&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Backend Systems</span></p>
-                    <p className="Flex slide-in slide-delay-1" style={{fontSize: '35px', marginBottom: 0}}>I tailor&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Frontend Experiences</span></p>
-                    <p className="Flex slide-in slide-delay-2" style={{fontSize: '35px'}}>I provide&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Fullstack Solutions</span></p>
+                <div className="Flex-center Slide-sentences">
+                    <p className="slide-in" style={{fontSize: '35px', marginTop: '5rem', marginBottom: 0}}>I create&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Backend Systems</span></p>
+                    <p className="slide-in slide-delay-1" style={{fontSize: '35px', marginBottom: 0}}>I tailor&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Frontend Experiences</span></p>
+                    <p className="slide-in slide-delay-2" style={{fontSize: '35px'}}>I provide&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Fullstack Solutions</span></p>
                 </div>
             </div>
             <div className="fade">
-                <img style={{ position: 'absolute', top: '38rem', left: 0, zIndex: -1, width: '400px'}} src={cloud1}/>
-                <img style={{ position: 'absolute', top: '44rem', left: '22rem', zIndex: -1, width: '150px'}} src={cloud2}/>
+                <img style={{ position: 'absolute', top: '38rem', left: 0, width: '400px'}} src={cloud1}/>
+                <img style={{ position: 'absolute', top: '44rem', left: '22rem', width: '150px'}} src={cloud2}/>
                 <img style={{ position: 'absolute', top: '39rem', left: '30rem', zIndex: -1, width: '400px'}} src={cloud3}/>
                 <img style={{ position: 'absolute', top: '44rem', left: '53rem', zIndex: -1, width: '400px'}} src={cloud4}/>
-                <img style={{ position: 'absolute', top: '44rem', left: '72rem', zIndex: -1}} src={smallbird}/>
-                <img style={{ position: 'absolute', top: '41rem', left: '77.5rem', zIndex: -1, width: '420px'}} src={cloud5}/>
-                <img style={{ position: 'absolute', top: '43rem', left: '100rem', zIndex: -1, width: '300px'}} src={cloud6}/>
+                <img style={{ position: 'absolute', top: '44rem', left: '72rem'}} src={smallbird}/>
+                <img style={{ position: 'absolute', top: '41rem', left: '77.5rem', width: '420px'}} src={cloud5}/>
+                <img style={{ position: 'absolute', top: '43rem', left: '100rem', width: '300px'}} src={cloud6}/>
             </div>
         </div>
     );
