@@ -7,6 +7,8 @@ import cloud4 from '../logos/cloud4.png'
 import cloud5 from '../logos/cloud5.png'
 import cloud6 from '../logos/cloud6.png'
 import smallbird from '../logos/birdsmall.png'
+
+//Homepage component
 const HomePage = () => {
 
     const panelStyle: React.CSSProperties = {
