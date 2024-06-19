@@ -17,8 +17,7 @@ function App() {
   const [detectNav, setDetectNav] = useState('');
   const hrStyle: React.CSSProperties = {
     width: '70rem',
-    borderColor: '#FFFFFF',
-    borderStyle: 'solid',
+    border: 'none',
     marginTop: '13rem'
   };
   
