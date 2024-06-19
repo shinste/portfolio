@@ -43,10 +43,10 @@ const Projects = () => {
                                 </div>
                                 <div style={{justifySelf: 'flex-end'}}>
                                     <div className="Flex-center">
-                                        <a href="https://master--illustrious-unicorn-98eadd.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}>
+                                        <a href="https://master--spotifysongrecommender.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}>
                                             <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: '#F5E186', boxShadow: '3px 3px 5px 0px grey'}}>Project</Button>
                                         </a>
-                                        <a href="https://github.com/shinste/collap_backend/" target="_blank" style={{ textDecoration: 'none' }}>
+                                        <a href="https://github.com/shinste/spotify_recommender/" target="_blank" style={{ textDecoration: 'none' }}>
                                             <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: '#F5E186', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
                                         </a>
                                     </div>
