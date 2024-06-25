@@ -106,7 +106,7 @@ const Projects = () => {
                                 <div style={{height: '80%'}}>
                                 <Typography style={{fontSize: '15px'}}>
                                     Collap is a collaborative event planning app that marks my first journey into full-stack development and framework usage. 
-                                    Because of its reltiavely large scope, the project helped me fully dive into Django, React, TypeScript, RESTful APIs, and more. 
+                                    Because of its relatively large scope, the project helped me fully dive into Django, React, TypeScript, RESTful APIs, and more. 
                                 </Typography>
                                 </div>
                                 <div style={{justifySelf: 'flex-end'}}>
