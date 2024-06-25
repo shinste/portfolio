@@ -19,7 +19,7 @@ const Projects = () => {
                 <hr style={{width: '14rem', borderColor: '#F5E186', borderStyle: 'solid', borderWidth: 2, marginLeft: 0, marginBottom: '2rem'}}/>
             </div>
             
-            <div className="Vertical-flex" style={{width: '100%', margin: 'auto', borderRadius: 12, marginTop: '3rem', color: '#404040'}}>
+            <div className="Grid">
             <div className="Project-div">
                     <h2 style={{fontSize: '23px', marginTop: 0}} >Spotify Recommendation App <span style={{fontSize:'13px', fontWeight: 'bolder', color: 'red'}}>Most Recent</span></h2>
                     <div className='Flex' style={{width: '100%', marginTop: '2rem'}}>
