@@ -15,18 +15,23 @@ import aws from '../logos/aws.png'
 import postgresql from '../logos/postgresql.png'
 import Logo from "./Logo";
 import portrait from '../logos/portrait.jpg'
+import React from "react";
 
-const AboutMe = () => {
+interface AboutComponents {
+    dayTime: boolean
+}
+
+const AboutMe: React.FC<AboutComponents> = ({dayTime}) => {
     return (
         <div style={{marginTop: '10rem', width: '70rem', marginLeft: 'auto', marginRight: 'auto'}}>
-            <h3 style={{color: 'black', fontSize: '60px', marginTop: -10, marginBottom: -2}}>About Me</h3>
-            <hr style={{width: '17.5rem', borderColor: '#F5E186', borderStyle: 'solid', borderWidth: 2, marginLeft: 0, marginBottom: '2rem'}}/>
+            <h3 style={{color: dayTime ? 'black': 'whitesmoke', fontSize: '60px', marginTop: -10, marginBottom: -2}}>About Me</h3>
+            <hr style={{width: '17.5rem', borderColor: dayTime ? '#F5E186' : '#D9D9D9', borderStyle: 'solid', borderWidth: 2, marginLeft: 0, marginBottom: '2rem'}}/>
             <div className="Flex" style={{'marginBottom': '5rem'}}>
                 <div>
                     <img style={{height: '300px', margin: '3rem', marginLeft: 0, borderRadius: 12}} src={portrait} />
                 </div>
                 <div style={{color: '#404040'}}>
-                    <Typography sx={{marginTop: '3rem', fontSize: '20px'}}>
+                    <Typography sx={{marginTop: '3rem', fontSize: '25px', fontWeight: 'bold', color: dayTime ? 'black' : 'white'}}>
                         My name is Stephen! I graduated with an Economics degree at the University of Washington (Seattle), but shortly after graduation I decided to pursue
                         my passion of coding. I started my journey only wanting to develop backend, but I've grown very fond of frontend as well! My favorite things about 
                         coding is learning new tools to optimize my means of developing and the satisfaction of being able to see what I've created. A couple hobbies I have are
@@ -35,16 +40,16 @@ const AboutMe = () => {
                 </div>
             </div>
 
-            <h3 style={{color: 'black', fontSize: '30px', marginBottom: -2}}>Tech Stack</h3>
-            <hr style={{width: '9rem', borderColor: '#F5E186', borderStyle: 'solid', marginLeft: 0, marginBottom: '2rem'}}/>
+            <h3 style={{color: dayTime ? 'black' : 'whitesmoke', fontSize: '30px', marginBottom: -2}}>Tech Stack</h3>
+            <hr style={{width: '9rem', borderColor: dayTime ? '#F5E186': '#D9D9D9' , borderStyle: 'solid', marginLeft: 0, marginBottom: '2rem'}}/>
 
-            <Typography m={1} sx={{color: '#8B8B8B', marginLeft: 0}}>Languages</Typography>
+            <Typography m={1} sx={{color:dayTime ? '#8B8B8B': '#D9D9D9', marginLeft: 0}}>Languages</Typography>
             <div className="Flex" style={{height: '6.5rem', marginBottom: '3rem'}}>
-                <Box className="Flex" sx={{border: 1, borderWidth: 4,borderColor: '#F5E186', marginRight: '3rem'}}>
+                <Box className="Flex" sx={{border: 1, borderWidth: 4,borderColor: dayTime ? '#F5E186': '#969191', marginRight: '3rem'}}>
                     <Logo image={typescript} /> 
                     <Logo image={python} rectangle={true} end={true}/>
                 </Box>
-                <Box className="Flex" sx={{border: 1, borderWidth: 4,borderColor: "#EEE5C7"}}>
+                <Box className="Flex" sx={{border: 1, borderWidth: 4,borderColor: dayTime ? "#EEE5C7": '#D9D9D9'}}>
                     <Logo image={java} rectangle={true}/>
                     <Logo image={javascript}/>
                     <Logo image={html}/>
@@ -53,24 +58,24 @@ const AboutMe = () => {
             </div>
 
 
-            <Typography m={1} sx={{color: '#8B8B8B', marginLeft: 0}}>Frameworks</Typography>
+            <Typography m={1} sx={{color: dayTime ? '#8B8B8B': '#D9D9D9', marginLeft: 0}}>Frameworks</Typography>
             <div className="Flex" style={{height: '6.5rem', marginBottom: '3rem'}}>
-                <Box className="Flex" sx={{border: 1, borderWidth: 4,borderColor: '#F5E186', marginRight: '3rem'}}>
+                <Box className="Flex" sx={{border: 1, borderWidth: 4,borderColor: dayTime ? '#F5E186': '#969191', marginRight: '3rem'}}>
                     <Logo image={react}/> 
                     <div style={{marginLeft: '-1rem'}}>
                         <Logo image={django} end={true}/>
                     </div>
                     
                 </Box>
-                <Box className="Flex" sx={{border: 1, borderWidth: 4,borderColor: "#EEE5C7"}}>
+                <Box className="Flex" sx={{border: 1, borderWidth: 4,borderColor: dayTime ? "#EEE5C7": '#D9D9D9'}}>
                     <Logo image={flask} end={true}/>
                 </Box>
             </div>
 
 
-            <Typography sx={{color: '#8B8B8B'}}>Tools</Typography>
+            <Typography sx={{color: dayTime ? '#8B8B8B': '#D9D9D9'}}>Tools</Typography>
             <div className="Flex" style={{height: '6.5rem'}}>
-                <Box className="Flex" sx={{border: 1, borderWidth: 4,borderColor: "#EEE5C7"}}>
+                <Box className="Flex" sx={{border: 1, borderWidth: 4,borderColor: dayTime ? '#F5E186': '#969191'}}>
                     <Logo image={figma}/>
                     <div style={{marginLeft: '-1rem'}}>
                         <Logo image={postman}/>

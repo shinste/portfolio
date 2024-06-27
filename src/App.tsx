@@ -12,7 +12,10 @@ import Contact from './components/Contact';
 
 
 function App() {
-  document.body.style.backgroundColor = "#EEE5C7"
+  const [dayTime, setDayTime] = useState(true);
+  const body = document.body;
+  body.style.transition = 'background-color 4s ease';
+  document.body.style.backgroundColor = dayTime ? "#EEE5C7" : 'black';
 
   const [detectNav, setDetectNav] = useState('');
   const hrStyle: React.CSSProperties = {
@@ -107,16 +110,18 @@ function App() {
     <div>
       <hr ref={componentRefs['Home']} style={{borderStyle: 'none'}}/>
       <header>
-        <NavBar handleButtonClick={handleButtonClick} detectNav={detectNav}/>
+        <NavBar handleButtonClick={handleButtonClick} detectNav={detectNav} dayTime={dayTime}/>
       </header>
       <body>
-        <HomePage />
-        <hr ref={componentRefs['Projects']} style={{...hrStyle}}/>
-        <Projects />
-        <hr ref={componentRefs['About Me']} style={{...hrStyle}}/>
-        <AboutMe />
-        <hr ref={componentRefs['Contact']} style={{...hrStyle}}/>
-        <Contact />
+        <div style={{width: '90%'}}>
+          <HomePage dayTime={dayTime} setDayTime={setDayTime}/>
+          <hr ref={componentRefs['Projects']} style={{...hrStyle}}/>
+          <Projects dayTime={dayTime}/>
+          <hr ref={componentRefs['About Me']} style={{...hrStyle}} />
+          <AboutMe dayTime={dayTime}/>
+          <hr ref={componentRefs['Contact']} style={{...hrStyle}}/>
+          <Contact dayTime={dayTime}/>    
+        </div>
       </body>
       <hr style={{borderStyle: 'none', marginTop: '6.7rem'}}/>
     </div>

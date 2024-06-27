@@ -11,16 +11,23 @@ import postman from '../logos/postman.png'
 import aws from '../logos/aws.png'
 import Logo from "./Logo";
 
-const Projects = () => {
+interface ProjectComponents {
+    dayTime: boolean;
+}
+const Projects: React.FC<ProjectComponents> = ({dayTime}) => {
+    let backgroundColor = '#F5E186';
+    if (!dayTime) {
+        backgroundColor = '#9D9D9';
+    }
     return (
         <div style={{marginTop: '10rem', width: '80rem', marginLeft: 'auto', marginRight: 'auto'}}>
             <div style={{width: '70rem', marginLeft: 'auto', marginRight: 'auto'}}>
-                <h3 style={{color: 'black', fontSize: '60px', marginTop: -10, marginBottom: -2}}>Projects</h3>
-                <hr style={{width: '14rem', borderColor: '#F5E186', borderStyle: 'solid', borderWidth: 2, marginLeft: 0, marginBottom: '2rem'}}/>
+                <h3 style={{color: dayTime ? 'black': 'whitesmoke', fontSize: '60px', marginTop: -10, marginBottom: -2}}>Projects</h3>
+                <hr style={{width: '14rem', borderColor: dayTime ? '#F5E186' : '#D9D9D9', borderStyle: 'solid', borderWidth: 2, marginLeft: 0, marginBottom: '2rem'}}/>
             </div>
             
             <div className="Grid">
-            <div className="Project-div">
+            <div className="Project-div" style={{backgroundColor: dayTime ? '#FDF8DF' : 'whitesmoke'}}>
                     <h2 style={{fontSize: '23px', marginTop: 0}} >Spotify Recommendation App <span style={{fontSize:'13px', fontWeight: 'bolder', color: 'red'}}>Most Recent</span></h2>
                     <div className='Flex' style={{width: '100%', marginTop: '2rem'}}>
                         <div className="Vertical-flex"> 
@@ -44,10 +51,10 @@ const Projects = () => {
                                 <div style={{justifySelf: 'flex-end'}}>
                                     <div className="Flex-center">
                                         <a href="https://master--spotifysongrecommender.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}>
-                                            <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: '#F5E186', boxShadow: '3px 3px 5px 0px grey'}}>Project</Button>
+                                            <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>Project</Button>
                                         </a>
                                         <a href="https://github.com/shinste/spotify_recommender/" target="_blank" style={{ textDecoration: 'none' }}>
-                                            <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: '#F5E186', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
+                                            <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
                                         </a>
                                     </div>
                                 </div>
@@ -57,7 +64,7 @@ const Projects = () => {
                     </div>
                 </div>
 
-                <div className="Project-div">
+                <div className="Project-div" style={{backgroundColor: dayTime ? '#FDF8DF' : 'whitesmoke'}}>
                     <h2 style={{fontSize: '23px', marginTop: 0}} >This Website</h2>
                     <div className='Flex' style={{width: '100%', marginTop: '2rem'}}>
                         <div className="Vertical-flex"> 
@@ -78,7 +85,7 @@ const Projects = () => {
                                 </div>
                                 <div style={{justifySelf: 'flex-end'}}>
                                     <a href="https://github.com/shinste/portfolio/" target="_blank" style={{ textDecoration: 'none', height: '20%'}}>
-                                        <Button variant="contained" sx={{marginLeft: 'auto', marginRight: 'auto', display: 'block', marginTop: '1rem', marginBottom: 0, backgroundColor: '#F5E186', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
+                                        <Button variant="contained" sx={{marginLeft: 'auto', marginRight: 'auto', display: 'block', marginTop: '1rem', marginBottom: 0, backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
                                     </a>
                                 </div>
 
@@ -87,7 +94,7 @@ const Projects = () => {
                     </div>
                 </div>
 
-                <div className="Project-div">
+                <div className="Project-div" style={{backgroundColor: dayTime ? '#FDF8DF' : 'whitesmoke'}}>
                     <h2 style={{fontSize: '23px', marginTop: 0}} >Collaborative Event Planning Application</h2>
                     <div className='Flex' style={{width: '100%', marginTop: '2rem'}}>
                         <div className="Vertical-flex"> 
@@ -112,10 +119,10 @@ const Projects = () => {
                                 <div style={{justifySelf: 'flex-end'}}>
                                     <div className="Flex-center">
                                         <a href="https://master--illustrious-unicorn-98eadd.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}>
-                                            <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: '#F5E186', boxShadow: '3px 3px 5px 0px grey'}}>Project</Button>
+                                            <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>Project</Button>
                                         </a>
                                         <a href="https://github.com/shinste/collap_backend/" target="_blank" style={{ textDecoration: 'none' }}>
-                                                <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: '#F5E186', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
+                                                <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
                                         </a>
                                     </div>
                                 </div>
@@ -124,7 +131,7 @@ const Projects = () => {
                     </div>
                 </div>
 
-                <div className="Project-div">
+                <div className="Project-div" style={{backgroundColor: dayTime ? '#FDF8DF' : 'whitesmoke'}}>
                     <h2 style={{fontSize: '23px', marginTop: 0}} >AI Poker Game</h2>
                     <div className='Flex' style={{width: '100%', marginTop: '2rem'}}>
                         <div className="Vertical-flex"> 
@@ -150,10 +157,10 @@ const Projects = () => {
                                 <div style={{justifySelf: 'flex-end'}}>
                                     <div className="Flex-center">
                                         <a href="https://main--pokerbot.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}>
-                                            <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: '#F5E186', boxShadow: '3px 3px 5px 0px grey'}}>Project</Button>
+                                            <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>Project</Button>
                                         </a>
                                         <a href="https://github.com/shinste/poker_bot_backend/" target="_blank" style={{ textDecoration: 'none' }}>
-                                            <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: '#F5E186', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
+                                            <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
                                         </a>
                                     </div>
                                 </div>

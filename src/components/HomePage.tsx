@@ -7,42 +7,54 @@ import cloud4 from '../logos/cloud4.png'
 import cloud5 from '../logos/cloud5.png'
 import cloud6 from '../logos/cloud6.png'
 import smallbird from '../logos/birdsmall.png'
+import React from "react";
 
+interface HomePageComponents {
+    dayTime: boolean;
+    setDayTime: React.Dispatch<React.SetStateAction<boolean>>;
+}
 //Homepage component
-const HomePage = () => {
+const HomePage: React.FC<HomePageComponents> = ({dayTime,setDayTime}) => {
 
-    const panelStyle: React.CSSProperties = {
-        backgroundColor: '#FDF8DF', 
-        height: '30rem',
-        width:'20rem', 
-        margin: '2rem', 
-        borderRadius: 12,
-      };
+    const handleTransition = () => {
+        const sun = document.querySelector('.sun');
+        console.log(sun);
+        sun?.classList.toggle('move');
+        setDayTime(!dayTime);
+    }
 
     return (
         <div style={{marginBottom: '19rem'}}>
-            <div className="fade" style={{ position: 'absolute', width: '25rem', height: '25rem', top: '-6rem', left: '-10rem', zIndex: -1, backgroundColor: '#F5E186', borderRadius: '50%'}}>
+            <div className="fade sun">
             </div>
-            <div className="slide-in" style={{ position: 'absolute', top: '12rem', left: '17rem', zIndex: -1}}>
+            <div className={`slide-in ${!dayTime && 'hidden'}`}  style={{ position: 'absolute', top: '12rem', left: '17rem', zIndex: -1}}>
                 <img src={duck}/>
             </div>
             <div className='Center-text Center-horizontal fade' style={{width: '33rem', marginTop: '10rem', marginLeft: '45rem'}}>
                 <div className='Flex'>
-                    <hr style={{width: '15rem', borderWidth: 3, borderColor: '#F5E186', borderStyle: 'solid', marginLeft: 0, marginRight: '4rem'}}/>
-                    <div style={{width: '1rem', height: '1rem', backgroundColor: '#F5E186', marginLeft: 6, borderRadius: '50%'}}></div>
+                    <hr style={{width: '15rem', borderWidth: 3, borderColor: dayTime ? '#F5E186': 'whitesmoke', borderStyle: 'solid', marginLeft: 0, marginRight: '4rem'}}/>
+                    <div style={{width: '1rem', height: '1rem', backgroundColor: dayTime ? '#F5E186': 'whitesmoke', marginLeft: 6, borderRadius: '50%'}}></div>
                 </div>
                 <div className="Flex">
-                    <h3 style={{color: 'black', fontSize: '60px', marginTop: -10, marginBottom: -5}}>Stephen Shın</h3>
-                    <p style={{marginTop: '2.3rem', marginLeft: '1rem'}}>Software Engineer</p>
+                    <h3 style={{color: dayTime ? 'black': 'whitesmoke', fontSize: '60px', marginTop: -10, marginBottom: -5}}>Stephen Shın</h3>
+                    <p style={{marginTop: '2.3rem', marginLeft: '1rem', color: !dayTime ? 'whitesmoke' : 'black'}}>Software Engineer</p>
                 </div>
-                <hr style={{width: '18.7rem', borderColor: '#F5E186', borderStyle: 'solid', marginLeft: 210, borderWidth: 3}}/>
+                <hr style={{width: '18.7rem', borderColor: dayTime ? '#F5E186': 'whitesmoke', borderStyle: 'solid', marginLeft: 210, borderWidth: 3}}/>
+                <div id='transition-div'>
+                    <div onClick={handleTransition} className={`transition-button ${!dayTime && 'night'}`}/>
+                </div>
+                <div id="transition-words">
+                    <p style={{marginRight: '3px', fontWeight: dayTime ? 'bold' : 'lighter', color: dayTime ? 'black' : 'white', textShadow: '0 0 10px gray'}}>Day Time</p>
+                    <p style={{marginLeft: '3px', fontWeight: !dayTime ? 'bold' : 'lighter', color: dayTime ? 'black' : 'white', textShadow: '0 0 10px white'}}>Night Time</p>
+                </div>
+            
                 <div className="Flex-center Slide-sentences">
-                    <p className="slide-in" style={{fontSize: '35px', marginTop: '5rem', marginBottom: 0}}>I create&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Backend Systems</span></p>
-                    <p className="slide-in slide-delay-1" style={{fontSize: '35px', marginBottom: 0}}>I tailor&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Frontend Experiences</span></p>
-                    <p className="slide-in slide-delay-2" style={{fontSize: '35px'}}>I provide&nbsp;<span style={{color: '#E1BD1A', fontWeight: 'bold'}}>Fullstack Solutions</span></p>
+                    <p className="slide-in " style={{fontSize: '35px', marginTop: '2rem', marginBottom: 0, color: dayTime ? 'black' : '#979797'}}>I create&nbsp;<span style={{color: dayTime ? '#E1BD1A': '#848484', fontWeight: 'bold', WebkitTextStroke: '1px #FFFFFF'}}>Backend Systems</span></p>
+                    <p className="slide-in slide-delay-1" style={{fontSize: '35px', marginBottom: 0, color: dayTime ? 'black' : '#979797'}}>I tailor&nbsp;<span style={{color: dayTime ? '#E1BD1A': '#848484', fontWeight: 'bold', WebkitTextStroke: '1px #FFFFFF'}}>Frontend Experiences</span></p>
+                    <p className="slide-in slide-delay-2" style={{fontSize: '35px', color: dayTime ? 'black' : '#979797'}}>I provide&nbsp;<span style={{color: dayTime ? '#E1BD1A': '#848484', fontWeight: 'bold', WebkitTextStroke: '1px #FFFFFF'}}>Fullstack Solutions</span></p>
                 </div>
             </div>
-            <div className="fade">
+            <div className={`fade ${!dayTime && 'hidden'}`}>
                 <img style={{ position: 'absolute', top: '38rem', left: 0, width: '400px'}} src={cloud1}/>
                 <img style={{ position: 'absolute', top: '44rem', left: '22rem', width: '150px'}} src={cloud2}/>
                 <img style={{ position: 'absolute', top: '39rem', left: '30rem', zIndex: -1, width: '400px'}} src={cloud3}/>

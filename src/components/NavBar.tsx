@@ -4,9 +4,10 @@ import NavButton from './NavButton';
 interface NavProps {
   handleButtonClick: (reference: string) => void;
   detectNav: string;
+  dayTime: boolean;
 }
 
-const NavBar: React.FC<NavProps> = ({handleButtonClick, detectNav}) => {
+const NavBar: React.FC<NavProps> = ({handleButtonClick, detectNav, dayTime}) => {
     const [navigation, setNavigation] = useState('Home');
 
     useEffect(() => {
@@ -17,14 +18,14 @@ const NavBar: React.FC<NavProps> = ({handleButtonClick, detectNav}) => {
       
     }, [detectNav]);
     return (
-      <div style={{position: 'fixed', top: 0, left: 0, right: 0, zIndex: 999}}>
-        <div className='Flex-center'>
-            <NavButton name={'Home'} button={navigation} setButton={setNavigation} handleButtonClick={handleButtonClick} />
-            <NavButton name={'Projects'} button={navigation} setButton={setNavigation} handleButtonClick={handleButtonClick} />
-            <NavButton name={'About Me'} button={navigation} setButton={setNavigation} handleButtonClick={handleButtonClick} />
-            <NavButton name={'Contact'} button={navigation} setButton={setNavigation} handleButtonClick={handleButtonClick} />
+      <div className={`Nav-bar ${!dayTime && 'transition'}`}style={{boxShadow: dayTime ? '0 0 15px #F5E186': '0 0 15px #D9D9D9'}}>
+        <div style={{display:'flex', flexDirection: 'column'}}>
+            <NavButton name={'Home'} button={navigation} setButton={setNavigation} handleButtonClick={handleButtonClick} day={dayTime} />
+            <NavButton name={'Projects'} button={navigation} setButton={setNavigation} handleButtonClick={handleButtonClick} day={dayTime}/>
+            <NavButton name={'About Me'} button={navigation} setButton={setNavigation} handleButtonClick={handleButtonClick} day={dayTime}/>
+            <NavButton name={'Contact'} button={navigation} setButton={setNavigation} handleButtonClick={handleButtonClick} day={dayTime}/>
         </div>
-        <hr style={{width: '45rem', borderColor: '#F5E186', borderStyle: 'solid'}}/>
+        
       </div>
     )
 };
