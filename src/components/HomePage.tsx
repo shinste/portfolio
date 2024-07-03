@@ -8,6 +8,7 @@ import cloud5 from '../logos/cloud5.png'
 import cloud6 from '../logos/cloud6.png'
 import smallbird from '../logos/birdsmall.png'
 import React from "react";
+import star from '../logos/star.png';
 
 interface HomePageComponents {
     dayTime: boolean;
@@ -30,6 +31,14 @@ const HomePage: React.FC<HomePageComponents> = ({dayTime,setDayTime}) => {
             <div className={`slide-in ${!dayTime && 'hidden'}`}  style={{ position: 'absolute', top: '12rem', left: '17rem', zIndex: -1}}>
                 <img src={duck}/>
             </div>
+            <div className={`fade ${dayTime && 'hidden'}`}>
+                <img src={star} className="star" style={{ width: '70px', top: '10%', left: '10%' }}/>
+                <img src={star} className="star" style={{ width: '30px', top: '30%', left: '60%' }}/>
+                <img src={star} className="star" style={{ width: '50px', top: '80%', left: '50%' }}/>
+                <img src={star} className="star" style={{ width: '50px', top: '5%', left: '90%' }}/>
+                <img src={star} className="star" style={{ width: '60px', top: '90%', left: '16%' }}/>
+            </div>
+            
             <div className='Center-text Center-horizontal fade' style={{width: '33rem', marginTop: '10rem', marginLeft: '45rem'}}>
                 <div className='Flex'>
                     <hr style={{width: '15rem', borderWidth: 3, borderColor: dayTime ? '#F5E186': 'whitesmoke', borderStyle: 'solid', marginLeft: 0, marginRight: '4rem'}}/>
@@ -48,10 +57,10 @@ const HomePage: React.FC<HomePageComponents> = ({dayTime,setDayTime}) => {
                     <p style={{marginLeft: '3px', fontWeight: !dayTime ? 'bold' : 'lighter', color: dayTime ? 'black' : 'white', textShadow: '0 0 10px white'}}>Night Time</p>
                 </div>
             
-                <div className="Flex-center Slide-sentences">
-                    <p className="slide-in " style={{fontSize: '35px', marginTop: '2rem', marginBottom: 0, color: dayTime ? 'black' : '#979797'}}>I create&nbsp;<span style={{color: dayTime ? '#E1BD1A': '#848484', fontWeight: 'bold', WebkitTextStroke: '1px #FFFFFF'}}>Backend Systems</span></p>
-                    <p className="slide-in slide-delay-1" style={{fontSize: '35px', marginBottom: 0, color: dayTime ? 'black' : '#979797'}}>I tailor&nbsp;<span style={{color: dayTime ? '#E1BD1A': '#848484', fontWeight: 'bold', WebkitTextStroke: '1px #FFFFFF'}}>Frontend Experiences</span></p>
-                    <p className="slide-in slide-delay-2" style={{fontSize: '35px', color: dayTime ? 'black' : '#979797'}}>I provide&nbsp;<span style={{color: dayTime ? '#E1BD1A': '#848484', fontWeight: 'bold', WebkitTextStroke: '1px #FFFFFF'}}>Fullstack Solutions</span></p>
+                <div className="Flex-center type-sentences">
+                    <p style={{fontSize: '35px', marginTop: '2rem', marginBottom: 0, color: dayTime ? 'black' : '#979797'}}>I create&nbsp;<span style={{color: dayTime ? '#E1BD1A': '#848484', fontWeight: 'bold', WebkitTextStroke: '1px #FFFFFF'}}>Backend Systems</span></p>
+                    <p id="type-delay-1"style={{fontSize: '35px', marginBottom: 0, color: dayTime ? 'black' : '#979797'}}>I tailor&nbsp;<span style={{color: dayTime ? '#E1BD1A': '#848484', fontWeight: 'bold', WebkitTextStroke: '1px #FFFFFF'}}>Frontend Experiences</span></p>
+                    <p id="type-delay-2" style={{fontSize: '35px', color: dayTime ? 'black' : '#979797'}}>I provide&nbsp;<span style={{color: dayTime ? '#E1BD1A': '#848484', fontWeight: 'bold', WebkitTextStroke: '1px #FFFFFF'}}>Fullstack Solutions</span></p>
                 </div>
             </div>
             <div className={`fade ${!dayTime && 'hidden'}`}>

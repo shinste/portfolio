@@ -95,13 +95,13 @@
 
 
 .slide-in.hidden {
-  display: block; /* Ensure the element is visible before animating out */
+  display: block;
   animation: slide-from-right 3s ease-in-out forwards;
 }
 
 
 .slide-delay-1 {
-  animation-delay: 0.5s;
+  animation-delay: 3s;
 }
 
 .slide-delay-2 {
@@ -137,12 +137,72 @@
   margin-top: '13rem';
 }
 
-.Slide-sentences {
+.type-sentences {
   flex-direction: column;
   color: #404040;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
+
+}
+
+.type-sentences p {
+  animation: 
+    typing 2.5s steps(40, end),
+    blink-caret 1s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid orange;
+  width: fit-content;
+}
+
+.type-sentences p#type-delay-1 {
+  animation: 
+    delay-1 2.8s steps(40, end),
+    blink-caret 1s step-end infinite;
+}
+
+.type-sentences p#type-delay-2 {
+  animation: 
+    delay-2 3s steps(40, end),
+    blink-caret 1s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes delay-1 {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes delay-2 {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 0;
+  }
+  60% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: currentColor; }
 }
 
 .Project-div{
@@ -267,4 +327,42 @@ body{
   justify-content: center;
   margin-top: 0;
   padding: 0;
+  
+}
+
+.star{
+  position: fixed;
+  z-index: -1;
+}
+
+#star2{
+  position: fixed;
+  width: 70px;
+  top: 10%;
+  left: 10%;
+  z-index: -1;
+}
+
+
+.typewriter p{
+  animation: 
+    typing 2.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  overflow: hidden;
+  border-right: 2px solid orange;
+}
+
+.title-div{
+  width: fit-content;
+  margin-right: auto;
+  margin-top: 10rem;
+}
+
+.title{
+  font-size: 60px;
+}
+
+
+.main-padding{
+  padding-left: 15%;
 }

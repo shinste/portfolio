@@ -29,13 +29,13 @@ const Contact: React.FC<ContactProps> = ({dayTime}) => {
         marginBottom: '5rem'
     };
     return (
-        <div>
-            <div style={{width: '70rem', marginLeft: 'auto', marginRight: 'auto', marginTop: '10rem'}}>
-                <h3 style={{color: dayTime ? 'black' : 'whitesmoke', fontSize: '60px', marginBottom: -2}}>Contact</h3>
+        <div className='main-padding'>
+            <div className="title-div">
+                <h3 className="title" style={{color: dayTime ? 'black' : 'whitesmoke', marginBottom: -2, marginLeft: 0, fontSize: '60px'}}>Contact</h3>
                 <hr style={{width: '13.5rem', borderColor: dayTime ? '#F5E186' : '#D9D9D9', borderWidth: 2, borderStyle: 'solid', marginLeft: 0, marginBottom: '2rem'}}/>
             </div>
             
-            <div className="Flex" style={{justifyContent: 'space-evenly', width: '80%', margin: 'auto', marginTop: '10rem'}}>
+            <div className="Flex" style={{justifyContent: 'space-evenly', width: '100%', marginTop: '10rem', marginLeft: '-2rem'}}>
                 <div style={{...panelStyle}}>
                     <img style={{...logoStyle}} src={dayTime ? phone : phoneGray} />
                     <h3 style={{textAlign: 'center'}}>360-790-6401</h3>

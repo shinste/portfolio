@@ -14,6 +14,7 @@ import Logo from "./Logo";
 interface ProjectComponents {
     dayTime: boolean;
 }
+
 const Projects: React.FC<ProjectComponents> = ({dayTime}) => {
     let backgroundColor = '#F5E186';
     if (!dayTime) {
@@ -51,10 +52,10 @@ const Projects: React.FC<ProjectComponents> = ({dayTime}) => {
                                 <div style={{justifySelf: 'flex-end'}}>
                                     <div className="Flex-center">
                                         <a href="https://master--spotifysongrecommender.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}>
-                                            <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>Project</Button>
+                                            <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey', '&:hover': {backgroundColor: '#A19D9D'}}}>Project</Button>
                                         </a>
                                         <a href="https://github.com/shinste/spotify_recommender/" target="_blank" style={{ textDecoration: 'none' }}>
-                                            <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
+                                            <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey', '&:hover': {backgroundColor: '#A19D9D'}}}>GitHub</Button>
                                         </a>
                                     </div>
                                 </div>
@@ -85,7 +86,7 @@ const Projects: React.FC<ProjectComponents> = ({dayTime}) => {
                                 </div>
                                 <div style={{justifySelf: 'flex-end'}}>
                                     <a href="https://github.com/shinste/portfolio/" target="_blank" style={{ textDecoration: 'none', height: '20%'}}>
-                                        <Button variant="contained" sx={{marginLeft: 'auto', marginRight: 'auto', display: 'block', marginTop: '1rem', marginBottom: 0, backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
+                                        <Button variant="contained" sx={{marginLeft: 'auto', marginRight: 'auto', display: 'block', marginTop: '1rem', marginBottom: 0, backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey', '&:hover': {backgroundColor: '#A19D9D'}}}>GitHub</Button>
                                     </a>
                                 </div>
 
@@ -119,10 +120,10 @@ const Projects: React.FC<ProjectComponents> = ({dayTime}) => {
                                 <div style={{justifySelf: 'flex-end'}}>
                                     <div className="Flex-center">
                                         <a href="https://master--illustrious-unicorn-98eadd.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}>
-                                            <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>Project</Button>
+                                            <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey', '&:hover': {backgroundColor: '#A19D9D'}}}>Project</Button>
                                         </a>
                                         <a href="https://github.com/shinste/collap_backend/" target="_blank" style={{ textDecoration: 'none' }}>
-                                                <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
+                                                <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey', '&:hover': {backgroundColor: '#A19D9D'}}}>GitHub</Button>
                                         </a>
                                     </div>
                                 </div>
@@ -157,10 +158,10 @@ const Projects: React.FC<ProjectComponents> = ({dayTime}) => {
                                 <div style={{justifySelf: 'flex-end'}}>
                                     <div className="Flex-center">
                                         <a href="https://main--pokerbot.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}>
-                                            <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>Project</Button>
+                                            <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey', '&:hover': {backgroundColor: '#A19D9D'}}}>Project</Button>
                                         </a>
                                         <a href="https://github.com/shinste/poker_bot_backend/" target="_blank" style={{ textDecoration: 'none' }}>
-                                            <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>GitHub</Button>
+                                            <Button variant="contained" sx={{marginLeft: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey', '&:hover': {backgroundColor: '#A19D9D'}}}>GitHub</Button>
                                         </a>
                                     </div>
                                 </div>
