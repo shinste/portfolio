@@ -39,7 +39,7 @@ const HomePage: React.FC<HomePageComponents> = ({dayTime,setDayTime}) => {
                 <img src={star} className="star" style={{ width: '60px', top: '90%', left: '16%' }}/>
             </div>
             
-            <div className='Center-text Center-horizontal fade' style={{width: '33rem', marginTop: '10rem', marginLeft: '45rem'}}>
+            <div className='Center-text Center-horizontal fade' style={{width: '33rem', marginTop: '10rem', marginLeft: 'auto', marginRight: 'auto'}}>
                 <div className='Flex'>
                     <hr style={{width: '15rem', borderWidth: 3, borderColor: dayTime ? '#F5E186': 'whitesmoke', borderStyle: 'solid', marginLeft: 0, marginRight: '4rem'}}/>
                     <div style={{width: '1rem', height: '1rem', backgroundColor: dayTime ? '#F5E186': 'whitesmoke', marginLeft: 6, borderRadius: '50%'}}></div>
