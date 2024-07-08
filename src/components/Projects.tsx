@@ -53,7 +53,7 @@ const Projects: React.FC<ProjectComponents> = ({dayTime}) => {
                                 </div>
                                 <div style={{justifySelf: 'flex-end'}}>
                                     <div className="Flex-center">
-                                        <a href="https://master--songrecommender.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}>
+                                        <a href="https://master--spotifysongrecommender.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}>
                                             <Button variant="contained" sx={{marginRight: '1rem', marginTop: '1rem', backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey', '&:hover': {backgroundColor: dayTime ? '#f7d958' : '#A19D9D'}}}>Project</Button>
                                         </a>
                                         <a href="https://github.com/shinste/spotify_recommender/" target="_blank" style={{ textDecoration: 'none' }}>
