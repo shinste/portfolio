@@ -32,13 +32,13 @@ const Projects: React.FC<ProjectComponents> = ({dayTime}) => {
                     <h2 style={{fontSize: '23px', marginTop: 0}} >Spotify Recommendation App <span style={{fontSize:'13px', fontWeight: 'bolder', color: 'green'}}>Most Recent</span></h2>
                     <div className='Flex' style={{width: '100%', marginTop: '2rem'}}>
                         <div className="Vertical-flex"> 
-                            <img style={{width: '533.33px', height: '300px', boxShadow: '3px 3px 3px', borderRadius: 12}} src={spotify} />
+                            <img className="gif" src={spotify} />
                             <div className="Flex-center" style={{marginTop: '1rem'}}>
                                <Logo image={react} small={true}/>
                                <Logo image={figma} small={true}/> 
                             </div>
                         </div>
-                        <div style={{width: '100rem', paddingLeft: '5rem'}}>
+                        <div style={{width: '100rem', paddingLeft: '5rem'}}> 
                             <h3 style={{marginTop: 0}}>Recommender</h3>
                             <div className="Project-desc">
                                 <div style={{height: '80%'}}>
@@ -72,7 +72,7 @@ const Projects: React.FC<ProjectComponents> = ({dayTime}) => {
                     <h2 style={{fontSize: '23px', marginTop: 0}} >This Website</h2>
                     <div className='Flex' style={{width: '100%', marginTop: '2rem'}}>
                         <div className="Vertical-flex"> 
-                            <img style={{width: '533.33px', height: '300px', boxShadow: '3px 3px 3px', borderRadius: 12}} src={portfolio} />
+                            <img className="gif" src={portfolio} />
                             <div className="Flex-center" style={{marginTop: '1rem'}}>
                                <Logo image={react} small={true}/>
                                <Logo image={figma} small={true}/> 
@@ -102,7 +102,7 @@ const Projects: React.FC<ProjectComponents> = ({dayTime}) => {
                     <h2 style={{fontSize: '23px', marginTop: 0}} >Collaborative Event Planning Application [9a-5p Mon-Fri]</h2>
                     <div className='Flex' style={{width: '100%', marginTop: '2rem'}}>
                         <div className="Vertical-flex"> 
-                            <img style={{width: '533.33px', height: '300px', boxShadow: '3px 3px 3px', borderRadius: 12}} src={collap} />
+                            <img className="gif" src={collap} />
                             <div className="Flex-center" style={{marginTop: '1rem'}}>
                                <Logo image={react} small={true}/>
                                <Logo image={django} small={true}/>
@@ -139,7 +139,7 @@ const Projects: React.FC<ProjectComponents> = ({dayTime}) => {
                     <h2 style={{fontSize: '23px', marginTop: 0}} >AI Poker Game</h2>
                     <div className='Flex' style={{width: '100%', marginTop: '2rem'}}>
                         <div className="Vertical-flex"> 
-                            <img style={{width: '533.33px', height: '300px', boxShadow: '3px 3px 3px', borderRadius: 12}} src={poker} />
+                            <img className="gif" src={poker} />
                             <div className="Flex-center" style={{marginTop: '1rem'}}>
                                <Logo image={react} small={true}/>
                                <Logo image={django} small={true}/>

@@ -355,3 +355,14 @@ body{
 .main-padding{
   padding-left: 15%;
 }
+
+.gif{
+  width: 600px;
+  box-shadow: 3px 3px 3px;
+  border-radius: 5px;
+}
+
+.gif:hover {
+  transform: scale(1.5);
+  transition: all 2s ease;
+}
