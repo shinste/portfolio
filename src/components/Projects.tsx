@@ -48,8 +48,7 @@ const Projects: React.FC<ProjectComponents> = ({dayTime}) => {
                                         me to select specific seed songs/artists to find new ones. Using the Spotify API, this application allows the user to search and browse songs 
                                         artists to create recommendations that can be directly added to existing playlists.
                                     </Typography>
-                                    <Typography sx={{color: 'red', fontSize: '13px'}}><span style={{fontWeight: 'bold'}}>Pending Approval:</span> Spotify must review my application to take this project out of development mode. Until then, the application will not have access to 
-                                        Spotify's APIs unless I manually put in your email. Please contact if you would like to give access.
+                                    <Typography sx={{color: 'red', fontSize: '13px'}}><span style={{fontWeight: 'bold'}}>Pending Approval:</span> Until my application is approved, unannounced accounts won't have access to Spotify APIs, so please use the testing credentals: [ username: stephenshin111@gmail.com | password: spotifytesting1 ].
                                     </Typography>
                                 </div>
                                 <div style={{justifySelf: 'flex-end'}}>
