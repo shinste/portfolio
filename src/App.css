@@ -366,3 +366,8 @@ body{
   transform: scale(1.5);
   transition: all 2s ease;
 }
+
+.clouds{
+  position: absolute;
+  bottom: 0;
+}

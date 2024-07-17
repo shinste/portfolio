@@ -64,13 +64,13 @@ const HomePage: React.FC<HomePageComponents> = ({dayTime,setDayTime}) => {
                 </div>
             </div>
             <div className={`fade ${!dayTime && 'hidden'}`}>
-                <img style={{ position: 'absolute', top: '38rem', left: 0, width: '400px'}} src={cloud1}/>
-                <img style={{ position: 'absolute', top: '44rem', left: '22rem', width: '150px'}} src={cloud2}/>
-                <img style={{ position: 'absolute', top: '39rem', left: '30rem', zIndex: -1, width: '400px'}} src={cloud3}/>
-                <img style={{ position: 'absolute', top: '44rem', left: '53rem', zIndex: -1, width: '400px'}} src={cloud4}/>
-                <img style={{ position: 'absolute', top: '44rem', left: '72rem'}} src={smallbird}/>
-                <img style={{ position: 'absolute', top: '41rem', left: '77.5rem', width: '420px'}} src={cloud5}/>
-                <img style={{ position: 'absolute', top: '43rem', left: '100rem', width: '300px'}} src={cloud6}/>
+                <img className="clouds" style={{ left: 0, width: '400px'}} src={cloud1}/>
+                <img className="clouds" style={{ left: '22rem', width: '150px'}} src={cloud2}/>
+                <img className="clouds" style={{ left: '30rem', zIndex: -1, width: '400px'}} src={cloud3}/>
+                <img className="clouds" style={{ left: '53rem', zIndex: -1, width: '400px'}} src={cloud4}/>
+                <img className="clouds" style={{ left: '72rem'}} src={smallbird}/>
+                <img className="clouds" style={{ left: '77.5rem', width: '420px'}} src={cloud5}/>
+                <img className="clouds" style={{ left: '100rem', width: '300px'}} src={cloud6}/>
             </div>
         </div>
     );

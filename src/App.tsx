@@ -38,7 +38,6 @@ function App() {
   };
 
   useEffect(() => {
-    // This uses observers to detect when the user has gone into the specified section, showing on the navigation bar component
     const observerHome = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
