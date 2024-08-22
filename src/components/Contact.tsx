@@ -54,7 +54,7 @@ const Contact: React.FC<ContactProps> = ({dayTime}) => {
                 </div>
                 <div style={{...panelStyle}}>
                     <img style={{...logoStyle}} src={dayTime ? linkedin : linkedinGray} />
-                    <a href="https://www.linkedin.com/feed/" target="_blank" style={{ textDecoration: 'none' }}>
+                    <a href="https://www.linkedin.com/in/stephen-shin-680bb0201/" target="_blank" style={{ textDecoration: 'none' }}>
                         <Button style={{...logoStyle}} variant='contained' sx={{backgroundColor: dayTime ? '#F5E186' : '#D9D9D9', boxShadow: '3px 3px 5px 0px grey'}}>
                             Visit
                         </Button>
