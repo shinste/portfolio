@@ -432,6 +432,11 @@ body {
 	margin-bottom: 5rem;
 }
 
+#Nav-bar-flex {
+	display: flex;
+	flex-direction: column;
+}
+
 @media (max-width: 480px) {
 	#Name {
 		font-size: 30px;
@@ -471,5 +476,23 @@ body {
 
 	#About-me-div {
 		flex-direction: column;
+	}
+
+	.Nav-bar {
+		position: fixed;
+		top: 3rem;
+		left: 0;
+		z-index: 99;
+		width: fit-content;
+		transition: all 0.3s ease;
+		background-color: white;
+		border-radius: 12px;
+	}
+
+	#Nav-bar-flex {
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 22rem;
+		justify-content: space-evenly;
 	}
 }

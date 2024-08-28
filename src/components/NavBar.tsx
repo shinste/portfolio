@@ -20,7 +20,7 @@ const NavBar: React.FC<NavProps> = ({ handleButtonClick, detectNav, dayTime }) =
 		<div
 			className={`Nav-bar ${!dayTime && 'transition'}`}
 			style={{ boxShadow: dayTime ? '0 0 15px #F5E186' : '0 0 15px #D9D9D9' }}>
-			<div style={{ display: 'flex', flexDirection: 'column' }}>
+			<div id="Nav-bar-flex">
 				<NavButton
 					name={'Home'}
 					button={navigation}
