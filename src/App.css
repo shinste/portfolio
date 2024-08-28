@@ -437,6 +437,16 @@ body {
 	flex-direction: column;
 }
 
+.Tech-stack {
+	display: flex;
+}
+
+.Tech-stack-holder {
+	display: flex;
+	height: 6.5rem;
+	margin-bottom: 3rem;
+}
+
 @media (max-width: 480px) {
 	#Name {
 		font-size: 30px;
@@ -479,14 +489,7 @@ body {
 	}
 
 	.Nav-bar {
-		position: fixed;
-		top: 3rem;
-		left: 0;
-		z-index: 99;
-		width: fit-content;
-		transition: all 0.3s ease;
-		background-color: white;
-		border-radius: 12px;
+		display: none;
 	}
 
 	#Nav-bar-flex {
@@ -494,5 +497,14 @@ body {
 		flex-wrap: wrap;
 		width: 22rem;
 		justify-content: space-evenly;
+	}
+
+	.clouds {
+		display: none;
+	}
+
+	.Tech-stack-holder {
+		overflow-x: scroll;
+		width: 20rem;
 	}
 }

@@ -84,45 +84,38 @@ const AboutMe: React.FC<AboutComponents> = ({ dayTime }) => {
 			<Typography m={1} sx={{ color: dayTime ? '#8B8B8B' : '#D9D9D9', marginLeft: 0 }}>
 				Languages
 			</Typography>
-			<div className="Flex" style={{ height: '6.5rem', marginBottom: '3rem' }}>
-				<Box
-					className="Flex"
-					sx={{
-						border: 1,
-						borderWidth: 4,
-						borderColor: dayTime ? '#F5E186' : '#969191',
+			<div className="Tech-stack-holder">
+				<div
+					className="Tech-stack"
+					style={{
+						border: `4px solid ${dayTime ? '#F5E186' : '#969191'}`,
 						marginRight: '3rem'
 					}}>
 					<Logo image={typescript} />
 					<Logo image={python} rectangle={true} end={true} />
-				</Box>
-				<Box
-					className="Flex"
-					sx={{ border: 1, borderWidth: 4, borderColor: dayTime ? '#EEE5C7' : '#D9D9D9' }}>
+				</div>
+				<div
+					className="Tech-stack"
+					style={{ border: `4px solid ${dayTime ? '#EEE5C7' : '#D9D9D9'}` }}>
 					<Logo image={java} rectangle={true} />
 					<Logo image={javascript} />
 					<Logo image={html} />
 					<Logo image={r} />
-				</Box>
+				</div>
 			</div>
 
 			<Typography m={1} sx={{ color: dayTime ? '#8B8B8B' : '#D9D9D9', marginLeft: 0 }}>
 				Frameworks
 			</Typography>
-			<div className="Flex" style={{ height: '6.5rem', marginBottom: '3rem' }}>
-				<Box
-					className="Flex"
-					sx={{
-						border: 1,
-						borderWidth: 4,
-						borderColor: dayTime ? '#F5E186' : '#969191',
-						marginRight: '3rem'
-					}}>
+			<div className="Tech-stack-holder">
+				<div
+					className="Tech-stack"
+					style={{ border: `4px solid ${dayTime ? '#F5E186' : '#969191'}`, marginRight: '3rem' }}>
 					<Logo image={react} />
 					<div style={{ marginLeft: '-1rem' }}>
 						<Logo image={django} end={true} />
 					</div>
-				</Box>
+				</div>
 				<Box
 					className="Flex"
 					sx={{ border: 1, borderWidth: 4, borderColor: dayTime ? '#EEE5C7' : '#D9D9D9' }}>
@@ -131,10 +124,10 @@ const AboutMe: React.FC<AboutComponents> = ({ dayTime }) => {
 			</div>
 
 			<Typography sx={{ color: dayTime ? '#8B8B8B' : '#D9D9D9' }}>Tools</Typography>
-			<div className="Flex" style={{ height: '6.5rem' }}>
-				<Box
-					className="Flex"
-					sx={{ border: 1, borderWidth: 4, borderColor: dayTime ? '#F5E186' : '#969191' }}>
+			<div className="Tech-stack-holder">
+				<div
+					className="Tech-stack"
+					style={{ border: `4px solid ${dayTime ? '#F5E186' : '#969191'}` }}>
 					<Logo image={figma} />
 					<div style={{ marginLeft: '-1rem' }}>
 						<Logo image={postman} />
@@ -142,7 +135,7 @@ const AboutMe: React.FC<AboutComponents> = ({ dayTime }) => {
 					<Logo image={github} />
 					<Logo image={aws} />
 					<Logo image={postgresql} />
-				</Box>
+				</div>
 			</div>
 		</div>
 	);
