@@ -10,155 +10,83 @@ import openai from '../logos/openai.svg';
 import postman from '../logos/postman.png';
 import aws from '../logos/aws.png';
 import Logo from '../components/Logo';
+import traveller from '../logos/traveller.png';
+import firebase from '../logos/firebase.png';
+import spotifyPng from '../logos/spotify.png';
 
 interface ProjectComponents {
 	dayTime: boolean;
 }
 
 const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
-	let backgroundColor = '#F5E186';
-	if (!dayTime) {
-		backgroundColor = '#9D9D9';
-	}
+	// let backgroundColor = '#F5E186';
+	// if (!dayTime) {
+	// 	backgroundColor = '#9D9D9';
+	// }
 	return (
-		<div style={{ marginTop: '10rem', width: '80rem', marginLeft: 'auto', marginRight: 'auto' }}>
-			<div style={{ width: '70rem', marginLeft: 'auto', marginRight: 'auto' }}>
-				<h3
-					style={{
-						color: dayTime ? 'black' : 'whitesmoke',
-						fontSize: '60px',
-						marginTop: -10,
-						marginBottom: -2
-					}}>
-					Projects
-				</h3>
-				<hr
-					style={{
-						width: '14rem',
-						borderColor: dayTime ? '#F5E186' : '#D9D9D9',
-						borderStyle: 'solid',
-						borderWidth: 2,
-						marginLeft: 0,
-						marginBottom: '2rem'
-					}}
-				/>
-			</div>
-
+		<div id="Projects-div">
+			<h3
+				className="Main-header Border-bottom"
+				style={{
+					color: dayTime ? 'black' : 'whitesmoke',
+					borderColor: dayTime ? '#F5E186' : '#D9D9D9'
+				}}>
+				Projects
+			</h3>
 			<div className="Grid">
-				<div
-					className="Project-div"
-					style={{ backgroundColor: dayTime ? '#FDF8DF' : 'whitesmoke' }}>
-					<h2 style={{ fontSize: '23px', marginTop: 0 }}>
-						Spotify Recommendation App{' '}
-						<span style={{ fontSize: '13px', fontWeight: 'bolder', color: 'green' }}>
-							Most Recent
-						</span>
-					</h2>
-					<div className="Project-wrap">
-						<div className="Vertical-flex">
-							<img className="gif" src={spotify} />
-							<div className="Flex-center" style={{ marginTop: '1rem' }}>
-								<Logo image={react} small={true} />
-								<Logo image={figma} small={true} />
-							</div>
-						</div>
-						<div className="Project-words-section">
-							<h3 style={{ marginTop: 0 }}>Recommender</h3>
-							<div className="Project-desc">
-								<div style={{ height: '80%' }}>
-									<Typography style={{ fontSize: '15px' }}>
-										This application's purpose is to help the user make song recommendations from
-										Spotiy that can be tailored towards the user's preference. The project was
-										inspired by my own trouble finding new tracks to add to my playlist, and I would
-										appreciate an that would enable me to select specific seed songs/artists to find
-										new ones. Using the Spotify API, this application allows the user to search and
-										browse songs artists to create recommendations that can be directly added to
-										existing playlists.
-									</Typography>
-									<Typography sx={{ color: 'red', fontSize: '13px' }}>
-										<span style={{ fontWeight: 'bold' }}>Pending Approval:</span> Until my
-										application is approved, unannounced accounts won't have access to Spotify APIs,
-										so please use the testing credentals: [ username: stephenshin111@gmail.com |
-										password: spotifytesting1! ].
-									</Typography>
-								</div>
-								<div style={{ justifySelf: 'flex-end' }}>
-									<div className="Flex-center">
-										<a
-											href="https://master--spotifysongrecommender.netlify.app/"
-											target="_blank"
-											style={{ textDecoration: 'none' }}>
-											<Button
-												variant="contained"
-												sx={{
-													marginRight: '1rem',
-													marginTop: '1rem',
-													backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-													boxShadow: '3px 3px 5px 0px grey',
-													'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
-												}}>
-												Project
-											</Button>
-										</a>
-										<a
-											href="https://github.com/shinste/spotify_recommender/"
-											target="_blank"
-											style={{ textDecoration: 'none' }}>
-											<Button
-												variant="contained"
-												sx={{
-													marginLeft: '1rem',
-													marginTop: '1rem',
-													backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-													boxShadow: '3px 3px 5px 0px grey',
-													'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
-												}}>
-												GitHub
-											</Button>
-										</a>
-									</div>
+				<div className="Each-project">
+					<div className="Title-tools Vertical-flex">
+						<h2 className="Project-title">
+							Event Planning Application <span className="Recent">Most Recent</span>
+						</h2>
+						<div className="Flex Justify-between">
+							<div className="Vertical-flex">
+								<img className="gif" src={traveller} />
+								<div className="Flex Justify-evenly">
+									<Logo image={react} small={true} end={true} />
+									<Logo image={figma} small={true} end={true} />
+									<Logo image={firebase} small={true} end={true} />
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
 
-				<div
-					className="Project-div"
-					style={{ backgroundColor: dayTime ? '#FDF8DF' : 'whitesmoke' }}>
-					<h2 style={{ fontSize: '23px', marginTop: 0 }}>This Website</h2>
-					<div className="Project-wrap">
-						<div className="Vertical-flex">
-							<img className="gif" src={portfolio} />
-							<div className="Flex-center" style={{ marginTop: '1rem' }}>
-								<Logo image={react} small={true} />
-								<Logo image={figma} small={true} />
-							</div>
-						</div>
-						<div className="Project-words-section">
-							<h3 style={{ marginTop: 0 }}>Portfolio Website</h3>
-							<div className="Project-desc">
-								<div style={{ height: '80%' }}>
-									<Typography style={{ fontSize: '15px' }}>
-										Yup! This website was designed and developed by me. This is a great project that
-										can show how easily I can produce a webpage and display all my other works at
-										the same time. What's shown on the left is my figma design that I created and
-										modeled this website after!
-									</Typography>
-								</div>
-								<div style={{ justifySelf: 'flex-end' }}>
+							<div className="Vertical-flex Description-div">
+								<p className="Project-name ">Traveller</p>
+								<p className="Project-description">
+									Traveller is an event planning application tailored for seamless travel
+									management. Built with TypeScript and React, the application leverages Google
+									Firebase to provide secure and dynamic data handling. This project is aimed to
+									revamp my first project, but focusing heavily on functional and aesthetic design.
+									Centered around user experience, this application allows users to easily organize
+									their travel plans with intuitive features like a calendar for scheduling, an
+									itinerary system to track daily events, and to-do lists for efficient task
+									management.
+								</p>
+								<div className="Flex-center">
 									<a
-										href="https://github.com/shinste/portfolio/"
+										href="https://travellerapplication.netlify.app/"
 										target="_blank"
-										style={{ textDecoration: 'none', height: '20%' }}>
+										style={{ textDecoration: 'none' }}>
 										<Button
 											variant="contained"
 											sx={{
-												marginLeft: 'auto',
-												marginRight: 'auto',
-												display: 'block',
+												marginRight: '1rem',
 												marginTop: '1rem',
-												marginBottom: 0,
+												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
+												boxShadow: '3px 3px 5px 0px grey',
+												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
+											}}>
+											Project
+										</Button>
+									</a>
+									<a
+										href="https://github.com/shinste/traveller"
+										target="_blank"
+										style={{ textDecoration: 'none' }}>
+										<Button
+											variant="contained"
+											sx={{
+												marginLeft: '1rem',
+												marginTop: '1rem',
 												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
 												boxShadow: '3px 3px 5px 0px grey',
 												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
@@ -171,106 +99,36 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 						</div>
 					</div>
 				</div>
+				<div className="Each-project">
+					<div className="Title-tools Vertical-flex">
+						<h2 className="Project-title">Spotify Recommendation App </h2>
+						<div className="Flex Justify-between">
+							<div className="Vertical-flex">
+								<img className="gif" src={spotify} />
+								<div className="Flex Justify-evenly">
+									<Logo image={react} small={true} />
+									<Logo image={figma} small={true} />
+									<Logo image={spotifyPng} small={true} />
+								</div>
+								<div></div>
+							</div>
 
-				<div
-					className="Project-div"
-					style={{ backgroundColor: dayTime ? '#FDF8DF' : 'whitesmoke' }}>
-					<h2 style={{ fontSize: '23px', marginTop: 0 }}>
-						Collaborative Event Planning Application [9a-5p Mon-Fri]
-					</h2>
-					<div className="Project-wrap">
-						<div className="Vertical-flex">
-							<img className="gif" src={collap} />
-							<div className="Flex-center" style={{ marginTop: '1rem' }}>
-								<Logo image={react} small={true} />
-								<Logo image={django} small={true} />
-								<Logo image={figma} small={true} />
-								<Logo image={postman} small={true} />
-								<Logo image={aws} small={true} />
-							</div>
-						</div>
-						<div className="Project-words-section">
-							<h3 style={{ marginTop: 0 }}>Collap</h3>
-							<div className="Project-desc">
-								<div style={{ height: '80%' }}>
-									<Typography style={{ fontSize: '15px' }}>
-										Collap is a collaborative event planning app that marks my first journey into
-										full-stack development and framework usage. Because of its relatively large
-										scope, the project helped me fully dive into Django, React, TypeScript, RESTful
-										APIs, and more.
-									</Typography>
-								</div>
-								<div style={{ justifySelf: 'flex-end' }}>
-									<div className="Flex-center">
-										<a
-											// href="https://master--illustrious-unicorn-98eadd.netlify.app/"
-											target="_blank"
-											style={{ textDecoration: 'none' }}>
-											<Button
-												disabled
-												variant="contained"
-												sx={{
-													marginRight: '1rem',
-													marginTop: '1rem',
-													backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-													boxShadow: '3px 3px 5px 0px grey',
-													'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
-												}}>
-												Project
-											</Button>
-										</a>
-										<a
-											href="https://github.com/shinste/collap_backend/"
-											target="_blank"
-											style={{ textDecoration: 'none' }}>
-											<Button
-												variant="contained"
-												sx={{
-													marginLeft: '1rem',
-													marginTop: '1rem',
-													backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-													boxShadow: '3px 3px 5px 0px grey',
-													'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
-												}}>
-												GitHub
-											</Button>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div
-					className="Project-div"
-					style={{ backgroundColor: dayTime ? '#FDF8DF' : 'whitesmoke' }}>
-					<h2 style={{ fontSize: '23px', marginTop: 0 }}>AI Poker Game</h2>
-					<div className="Project-wrap">
-						<div className="Vertical-flex">
-							<img className="gif" src={poker} />
-							<div className="Flex-center" style={{ marginTop: '1rem' }}>
-								<Logo image={react} small={true} />
-								<Logo image={django} small={true} />
-								<Logo image={openai} small={true} />
-								<Logo image={figma} small={true} />
-								<Logo image={aws} small={true} />
-							</div>
-						</div>
-						<div className="Project-words-section">
-							<h3 style={{ marginTop: 0 }}>Poker Bot</h3>
-							<div className="Project-desc">
-								<div style={{ height: '80%' }}>
-									<Typography style={{ fontSize: '15px' }}>
-										Poker Bot is a single-page web app born from my desire to improve my poker
-										skills while solidifying my React and TypeScript. It features a streamlined user
-										interface for playing against AI, seeking move recommendations, or analyzing
-										gameplay.
-									</Typography>
-								</div>
-								<div style={{ justifySelf: 'flex-end' }}>
-									<div className="Flex-center">
-										{/* <a href="https://main--pokerbot.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}> */}
+							<div className="Vertical-flex Description-div">
+								<p className="Project-name ">Recommender</p>
+								<p className="Project-description">
+									This application's purpose is to help the user make song recommendations from
+									Spotiy that can be tailored towards the user's preference. The project was
+									inspired by my own trouble finding new tracks to add to my playlist, and I would
+									appreciate an that would enable me to select specific seed songs/artists to find
+									new ones. Using the Spotify API, this application allows the user to search and
+									browse songs artists to create recommendations that can be directly added to
+									existing playlists.
+								</p>
+								<div className="Flex-center">
+									<a
+										href="https://master--spotifysongrecommender.netlify.app/"
+										target="_blank"
+										style={{ textDecoration: 'none' }}>
 										<Button
 											variant="contained"
 											sx={{
@@ -279,28 +137,147 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
 												boxShadow: '3px 3px 5px 0px grey',
 												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
-											}}
-											disabled>
+											}}>
 											Project
 										</Button>
-										{/* </a> */}
-										<a
-											href="https://github.com/shinste/poker_bot_backend/"
-											target="_blank"
-											style={{ textDecoration: 'none' }}>
-											<Button
-												variant="contained"
-												sx={{
-													marginLeft: '1rem',
-													marginTop: '1rem',
-													backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-													boxShadow: '3px 3px 5px 0px grey',
-													'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
-												}}>
-												GitHub
-											</Button>
-										</a>
-									</div>
+									</a>
+									<a
+										href="https://github.com/shinste/spotify_recommender/"
+										target="_blank"
+										style={{ textDecoration: 'none' }}>
+										<Button
+											variant="contained"
+											sx={{
+												marginLeft: '1rem',
+												marginTop: '1rem',
+												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
+												boxShadow: '3px 3px 5px 0px grey',
+												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
+											}}>
+											GitHub
+										</Button>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="Each-project">
+					<div className="Title-tools Vertical-flex">
+						<h2 className="Project-title">Collaborative Event Planning Application </h2>
+						<div className="Flex Justify-between">
+							<div className="Vertical-flex">
+								<img className="gif" src={collap} />
+								<div className="Flex Justify-evenly">
+									<Logo image={react} small={true} />
+									<Logo image={django} small={true} />
+									<Logo image={figma} small={true} />
+									<Logo image={postman} small={true} />
+									<Logo image={aws} small={true} />
+								</div>
+							</div>
+
+							<div className="Vertical-flex Description-div">
+								<p className="Project-name ">Collap</p>
+								<p className="Project-description">
+									Collap is a collaborative event planning app that marks my first journey into
+									full-stack development and framework usage. Because of its relatively large scope,
+									the project helped me fully dive into Django, React, TypeScript, RESTful APIs, and
+									more.
+								</p>
+								<div className="Flex-center">
+									<a
+										// href="https://master--illustrious-unicorn-98eadd.netlify.app/"
+										target="_blank"
+										style={{ textDecoration: 'none' }}>
+										<Button
+											disabled
+											variant="contained"
+											sx={{
+												marginRight: '1rem',
+												marginTop: '1rem',
+												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
+												boxShadow: '3px 3px 5px 0px grey',
+												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
+											}}>
+											Project
+										</Button>
+									</a>
+									<a
+										href="https://github.com/shinste/collap_backend/"
+										target="_blank"
+										style={{ textDecoration: 'none' }}>
+										<Button
+											variant="contained"
+											sx={{
+												marginLeft: '1rem',
+												marginTop: '1rem',
+												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
+												boxShadow: '3px 3px 5px 0px grey',
+												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
+											}}>
+											GitHub
+										</Button>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="Each-project">
+					<div className="Title-tools Vertical-flex">
+						<h2 className="Project-title">AI Poker Game</h2>
+						<div className="Flex Justify-between">
+							<div className="Vertical-flex">
+								<img className="gif" src={poker} />
+								<div className="Flex Justify-evenly">
+									<Logo image={react} small={true} />
+									<Logo image={django} small={true} />
+									<Logo image={openai} small={true} />
+									<Logo image={figma} small={true} />
+									<Logo image={aws} small={true} />
+								</div>
+							</div>
+
+							<div className="Vertical-flex Description-div">
+								<p className="Project-name ">Poker Bot</p>
+								<p className="Project-description">
+									Poker Bot is a single-page web app born from my desire to improve my poker skills
+									while solidifying my React and TypeScript. It features a streamlined user
+									interface for playing against AI, seeking move recommendations, or analyzing
+									gameplay.
+								</p>
+								<div className="Flex-center">
+									{/* <a href="https://main--pokerbot.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}> */}
+									<Button
+										variant="contained"
+										sx={{
+											marginRight: '1rem',
+											marginTop: '1rem',
+											backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
+											boxShadow: '3px 3px 5px 0px grey',
+											'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
+										}}
+										disabled>
+										Project
+									</Button>
+									{/* </a> */}
+									<a
+										href="https://github.com/shinste/poker_bot_backend/"
+										target="_blank"
+										style={{ textDecoration: 'none' }}>
+										<Button
+											variant="contained"
+											sx={{
+												marginLeft: '1rem',
+												marginTop: '1rem',
+												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
+												boxShadow: '3px 3px 5px 0px grey',
+												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
+											}}>
+											GitHub
+										</Button>
+									</a>
 								</div>
 							</div>
 						</div>

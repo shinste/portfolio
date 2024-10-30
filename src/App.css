@@ -52,6 +52,14 @@
 	margin-right: auto;
 }
 
+.Justify-between {
+	justify-content: space-between;
+}
+
+.Justify-evenly {
+	justify-content: space-evenly;
+}
+
 .Vertical-flex {
 	display: 'flex';
 	flex-direction: column;
@@ -245,6 +253,7 @@
 	color: #404040;
 	display: flex;
 	flex-wrap: wrap;
+	margin-left: 8vw;
 }
 
 .sun {
@@ -325,7 +334,7 @@ body {
 .Nav-bar {
 	position: fixed;
 	top: 30%;
-	left: 85%;
+	left: 5vw;
 	right: 0;
 	z-index: 99;
 	width: fit-content;
@@ -369,10 +378,11 @@ body {
 	width: 600px;
 	box-shadow: 3px 3px 3px;
 	border-radius: 5px;
+	margin-bottom: 1rem;
 }
 
 .gif:hover {
-	transform: scale(1.5);
+	transform: scale(1.2);
 	transition: all 2s ease;
 }
 
@@ -445,6 +455,60 @@ body {
 	display: flex;
 	height: 6.5rem;
 	margin-bottom: 3rem;
+}
+
+.Project-title {
+	font-size: 23px;
+	margin-top: 0;
+}
+
+.Title-tools {
+	margin-left: 10vw;
+}
+
+.Project-name {
+	font-size: 30px;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+
+.Project-description {
+	font-size: 20px;
+	width: 80%;
+	margin-top: 0;
+}
+
+#Projects-div {
+	margin-top: 10rem;
+}
+
+.Border-bottom {
+	border-width: 5px;
+	border-bottom: 3px solid #282c34;
+}
+
+.Main-header {
+	font-size: 60px;
+	margin: 0;
+	width: fit-content;
+	margin-left: 18vw;
+}
+
+.Each-project {
+	width: 100%;
+	height: fit-content;
+	margin-bottom: 10rem;
+}
+
+.Recent {
+	font-size: 13px;
+	font-weight: bolder;
+	color: green;
+	margin-top: 2rem;
+}
+
+.Description-div {
+	width: 60%;
 }
 
 @media (max-width: 480px) {
