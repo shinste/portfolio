@@ -23,6 +23,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 	// if (!dayTime) {
 	// 	backgroundColor = '#9D9D9';
 	// }
+	const color = dayTime ? 'black' : 'whitesmoke';
 	return (
 		<div id="Projects-div">
 			<h3
@@ -33,11 +34,11 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 				}}>
 				Projects
 			</h3>
-			<div className="Grid">
+			<div className="Grid" style={{ color: color }}>
 				<div className="Each-project">
 					<div className="Title-tools Vertical-flex">
 						<h2 className="Project-title">
-							Event Planning Application <span className="Recent">Most Recent</span>
+							Event Planning Application <span className="Recent">In Progress</span>
 						</h2>
 						<div className="Flex Justify-between">
 							<div className="Vertical-flex">
@@ -72,7 +73,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 												marginRight: '1rem',
 												marginTop: '1rem',
 												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-												boxShadow: '3px 3px 5px 0px grey',
+												boxShadow: '1px 1px 3px 0px grey',
 												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
 											}}>
 											Project
@@ -88,7 +89,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 												marginLeft: '1rem',
 												marginTop: '1rem',
 												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-												boxShadow: '3px 3px 5px 0px grey',
+												boxShadow: '1px 1px 3px 0px grey',
 												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
 											}}>
 											GitHub
@@ -135,7 +136,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 												marginRight: '1rem',
 												marginTop: '1rem',
 												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-												boxShadow: '3px 3px 5px 0px grey',
+												boxShadow: '1px 1px 3px 0px grey',
 												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
 											}}>
 											Project
@@ -151,7 +152,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 												marginLeft: '1rem',
 												marginTop: '1rem',
 												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-												boxShadow: '3px 3px 5px 0px grey',
+												boxShadow: '1px 1px 3px 0px grey',
 												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
 											}}>
 											GitHub
@@ -197,7 +198,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 												marginRight: '1rem',
 												marginTop: '1rem',
 												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-												boxShadow: '3px 3px 5px 0px grey',
+												boxShadow: '1px 1px 3px 0px grey',
 												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
 											}}>
 											Project
@@ -213,7 +214,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 												marginLeft: '1rem',
 												marginTop: '1rem',
 												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-												boxShadow: '3px 3px 5px 0px grey',
+												boxShadow: '1px 1px 3px 0px grey',
 												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
 											}}>
 											GitHub
@@ -255,7 +256,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 											marginRight: '1rem',
 											marginTop: '1rem',
 											backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-											boxShadow: '3px 3px 5px 0px grey',
+											boxShadow: '1px 1px 3px 0px grey',
 											'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
 										}}
 										disabled>
@@ -272,7 +273,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 												marginLeft: '1rem',
 												marginTop: '1rem',
 												backgroundColor: dayTime ? '#F5E186' : '#D9D9D9',
-												boxShadow: '3px 3px 5px 0px grey',
+												boxShadow: '1px 1px 3px 0px grey',
 												'&:hover': { backgroundColor: dayTime ? '#f7d958' : '#A19D9D' }
 											}}>
 											GitHub
