@@ -398,7 +398,7 @@ body {
 	overflow-x: hidden;
 }
 
-#Contact-div {
+.Contact-div {
 	display: flex;
 	justify-content: space-evenly;
 	width: 50vw;
@@ -406,6 +406,9 @@ body {
 	flex-wrap: wrap;
 	margin-left: auto;
 	margin-right: auto;
+}
+.Contact-div.in-view {
+	animation: appear 3s ease;
 }
 
 .Page-div {
@@ -500,6 +503,10 @@ body {
 	margin-bottom: 10rem;
 }
 
+.Each-project.in-view {
+	animation: fade-in 2s ease;
+}
+
 .Recent {
 	font-size: 13px;
 	font-weight: bolder;
@@ -509,6 +516,43 @@ body {
 
 .Description-div {
 	width: 60%;
+}
+
+.About-me {
+	margin-top: 3rem;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.About-me.in-view {
+	animation: appear 3s ease;
+}
+
+.About-me.in-view {
+	animation: slide-from-left 1s ease;
+}
+
+.Logo.in-view {
+	/* animation: slide-from-right 1s ease-in; */
+	animation: slide-from-left 1s ease;
+
+	/* animation: slide-from-left 1s ease-in-out forwards; */
+}
+
+/* .type-sentences p {
+	animation: typing 1.5s steps(40, end);
+	white-space: nowrap;
+	overflow: hidden;
+	width: fit-content;
+} */
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @media (max-width: 480px) {

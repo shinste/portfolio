@@ -8,12 +8,14 @@ import githubGray from '../logos/GitHubGray.png';
 import linkedinGray from '../logos/LinkedInGray.png';
 import { Button } from '@mui/material';
 import React from 'react';
+import useIntersectionAnimation from '../hooks/useAnimate';
 
 interface ContactProps {
 	dayTime: boolean;
 }
 
 const Contact: React.FC<ContactProps> = ({ dayTime }) => {
+	useIntersectionAnimation();
 	const panelStyle: React.CSSProperties = {
 		backgroundColor: dayTime ? '#FDF8DF' : 'whitesmoke',
 		height: '20rem',
@@ -54,7 +56,7 @@ const Contact: React.FC<ContactProps> = ({ dayTime }) => {
 				/>
 			</div>
 
-			<div id="Contact-div">
+			<div className="Contact-div animate">
 				<div style={{ ...panelStyle }}>
 					<img style={{ ...logoStyle }} src={dayTime ? phone : phoneGray} />
 					<h3 style={{ textAlign: 'center' }}>360-790-6401</h3>

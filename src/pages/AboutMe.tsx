@@ -16,12 +16,15 @@ import postgresql from '../logos/postgresql.png';
 import Logo from '../components/Logo';
 import portrait from '../logos/portrait.jpg';
 import React from 'react';
+import useIntersectionAnimation from '../hooks/useAnimate';
 
 interface AboutComponents {
 	dayTime: boolean;
 }
 
 const AboutMe: React.FC<AboutComponents> = ({ dayTime }) => {
+	useIntersectionAnimation();
+
 	return (
 		<div className="Page-div">
 			<h3
@@ -51,20 +54,20 @@ const AboutMe: React.FC<AboutComponents> = ({ dayTime }) => {
 					/>
 				</div>
 				<div style={{ color: '#404040' }}>
-					<Typography
-						sx={{
-							marginTop: '3rem',
-							fontSize: '25px',
-							fontWeight: 'bold',
+					<p
+						className="About-me animate"
+						style={{
 							color: dayTime ? 'black' : 'white'
 						}}>
 						My name is Stephen! I graduated with an Economics degree at the University of Washington
 						(Seattle), but shortly after graduation I decided to pursue my passion of coding. I
-						started my journey only wanting to develop backend, but I've grown very fond of frontend
-						as well! My favorite things about coding is learning new tools to optimize my means of
-						developing and the satisfaction of being able to see what I've created. A couple hobbies
-						I have are playing volleyball, lifting, and playing videogames.
-					</Typography>
+						started my journey only wanting to develop backend, but after completing many React
+						projects, I've grown very fond of frontend as well! I now find myself having more fun
+						creating User Interfaces that provide a great experience! My favorite things about
+						coding is learning new tools to optimize my means of developing and the satisfaction of
+						being able to see what I've created. A couple hobbies I have are playing volleyball,
+						lifting, and playing videogames.
+					</p>
 				</div>
 			</div>
 

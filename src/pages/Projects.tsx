@@ -13,17 +13,16 @@ import Logo from '../components/Logo';
 import traveller from '../logos/traveller.png';
 import firebase from '../logos/firebase.png';
 import spotifyPng from '../logos/spotify.png';
+import useIntersectionAnimation from '../hooks/useAnimate';
 
 interface ProjectComponents {
 	dayTime: boolean;
 }
 
 const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
-	// let backgroundColor = '#F5E186';
-	// if (!dayTime) {
-	// 	backgroundColor = '#9D9D9';
-	// }
 	const color = dayTime ? 'black' : 'whitesmoke';
+
+	useIntersectionAnimation();
 	return (
 		<div id="Projects-div">
 			<h3
@@ -35,7 +34,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 				Projects
 			</h3>
 			<div className="Grid" style={{ color: color }}>
-				<div className="Each-project">
+				<div className="Each-project animate">
 					<div className="Title-tools Vertical-flex">
 						<h2 className="Project-title">
 							Event Planning Application <span className="Recent">In Progress</span>
@@ -100,7 +99,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 						</div>
 					</div>
 				</div>
-				<div className="Each-project">
+				<div className="Each-project animate">
 					<div className="Title-tools Vertical-flex">
 						<h2 className="Project-title">Spotify Recommendation App </h2>
 						<div className="Flex Justify-between">
@@ -163,7 +162,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 						</div>
 					</div>
 				</div>
-				<div className="Each-project">
+				<div className="Each-project animate">
 					<div className="Title-tools Vertical-flex">
 						<h2 className="Project-title">Collaborative Event Planning Application </h2>
 						<div className="Flex Justify-between">
@@ -225,7 +224,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 						</div>
 					</div>
 				</div>
-				<div className="Each-project">
+				<div className="Each-project animate">
 					<div className="Title-tools Vertical-flex">
 						<h2 className="Project-title">AI Poker Game</h2>
 						<div className="Flex Justify-between">
