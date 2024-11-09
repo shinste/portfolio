@@ -10,10 +10,14 @@ import openai from '../logos/openai.svg';
 import postman from '../logos/postman.png';
 import aws from '../logos/aws.png';
 import Logo from '../components/Logo';
-import traveller from '../logos/traveller.png';
+import traveller from '../logos/traveller.gif';
 import firebase from '../logos/firebase.png';
 import spotifyPng from '../logos/spotify.png';
+import traveller2 from '../logos/traveller2.gif';
+import traveller3 from '../logos/traveller3.gif';
+
 import useIntersectionAnimation from '../hooks/useAnimate';
+import { useState } from 'react';
 
 interface ProjectComponents {
 	dayTime: boolean;
@@ -21,7 +25,7 @@ interface ProjectComponents {
 
 const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 	const color = dayTime ? 'black' : 'whitesmoke';
-
+	const [travellerGif, setTravellerGif] = useState(0);
 	useIntersectionAnimation();
 	return (
 		<div id="Projects-div">
@@ -41,11 +45,50 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 						</h2>
 						<div className="Flex Justify-between">
 							<div className="Vertical-flex">
-								<img className="gif" src={traveller} />
+								<div className="Flex-center">
+									{travellerGif === 0 && <img className="gif" src={traveller} />}
+									{travellerGif === 1 && <img className="gif" src={traveller2} />}
+									{travellerGif === 2 && <img className="gif" src={traveller3} />}
+								</div>
 								<div className="Flex Justify-evenly">
 									<Logo image={react} small={true} end={true} />
 									<Logo image={figma} small={true} end={true} />
 									<Logo image={firebase} small={true} end={true} />
+								</div>
+								<div className="Display-options">
+									<button className="Bland-button" onClick={() => setTravellerGif(0)}>
+										<img
+											className="Small-display"
+											style={{
+												border: travellerGif === 0 ? '#f7d958 2px solid' : 'none',
+												opacity: travellerGif === 0 ? 0.5 : 1
+											}}
+											src={traveller}
+											alt=""
+										/>
+									</button>
+									<button className="Bland-button" onClick={() => setTravellerGif(1)}>
+										<img
+											className="Small-display"
+											style={{
+												border: travellerGif === 1 ? '#f7d958 2px solid' : 'none',
+												opacity: travellerGif === 1 ? 0.5 : 1
+											}}
+											src={traveller2}
+											alt=""
+										/>
+									</button>
+									<button className="Bland-button" onClick={() => setTravellerGif(2)}>
+										<img
+											className="Small-display"
+											style={{
+												border: travellerGif === 2 ? '#f7d958 2px solid' : 'none',
+												opacity: travellerGif === 2 ? 0.5 : 1
+											}}
+											src={traveller3}
+											alt=""
+										/>
+									</button>
 								</div>
 							</div>
 
