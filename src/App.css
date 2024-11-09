@@ -528,10 +528,6 @@ body {
 	animation: appear 3s ease;
 }
 
-.About-me.in-view {
-	animation: slide-from-left 1s ease;
-}
-
 .Logo.in-view {
 	/* animation: slide-from-right 1s ease-in; */
 	animation: slide-from-left 1s ease;
