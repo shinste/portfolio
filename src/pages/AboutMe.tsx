@@ -27,54 +27,51 @@ const AboutMe: React.FC<AboutComponents> = ({ dayTime }) => {
 
 	return (
 		<div className="Page-div">
-			<h3
-				style={{
-					color: dayTime ? 'black' : 'whitesmoke',
-					fontSize: '60px',
-					marginTop: -10,
-					marginBottom: -2
-				}}>
-				About Me
-			</h3>
-			<hr
-				style={{
-					width: '17.5rem',
-					borderColor: dayTime ? '#F5E186' : '#D9D9D9',
-					borderStyle: 'solid',
-					borderWidth: 2,
-					marginLeft: 0,
-					marginBottom: '2rem'
-				}}
-			/>
-			<div id="About-me-div">
-				<div>
-					<img
-						style={{ height: '300px', margin: '3rem', marginLeft: 0, borderRadius: 12 }}
-						src={portrait}
-					/>
-				</div>
-				<div style={{ color: '#404040' }}>
-					<p
-						className="About-me animate"
-						style={{
-							color: dayTime ? 'black' : 'white'
-						}}>
-						My name is Stephen! I graduated with an Economics degree at the University of Washington
-						(Seattle), but shortly after graduation I decided to pursue my passion of coding. I
-						started my journey only wanting to develop backend, but after completing many React
-						projects, I've grown very fond of frontend as well! I now find myself having more fun
-						creating User Interfaces that provide a great experience! My favorite things about
-						coding is learning new tools to optimize my means of developing and the satisfaction of
-						being able to see what I've created. A couple hobbies I have are playing volleyball,
-						lifting, and playing videogames.
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				className="white display-block"
+				viewBox="0 0 1440 320">
+				<path
+					fill="#F9F9F9"
+					fill-opacity="1"
+					d="M0,32L48,37.3C96,43,192,53,288,48C384,43,480,21,576,21.3C672,21,768,43,864,69.3C960,96,1056,128,1152,160C1248,192,1344,224,1392,240L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+			</svg>
+			<div className="padding white">
+				<h3 className="main-header">TOOLS</h3>
+				<div className="Flex" style={{ width: '80vw' }}>
+					<p id="tech-text">
+						My go-to programming language is TypeScript, with React as my favorite library and
+						Next.js as my preferred framework. These tools have been primarily used throughout most
+						of my projects, allowing scalable, robust and user-focused applications. I’ve gained
+						much experience through utilizing these tools, and I am confident in utilizing them
+						effectively. I am also eager to learn any NEW tools/technologies to meet specific
+						project needs. I enjoy discovering new and innovative ways to enhance user experience
+						and delivering exceptional results.
 					</p>
+					<div className="tech-flex">
+						<div className="tech-hold">
+							<Logo image={typescript} />
+							<Logo image={python} rectangle={true} />
+							<Logo image={java} rectangle={true} />
+							<Logo image={javascript} />
+							<Logo image={html} />
+							<Logo image={r} />
+						</div>
+						<div className="tech-hold">
+							<Logo image={figma} />
+							<Logo image={postman} />
+							<Logo image={github} />
+							<Logo image={aws} />
+							<Logo image={postgresql} />
+						</div>
+						<div className="tech-hold">
+							<Logo image={react} />
+							<Logo image={django} />
+							<Logo image={flask} />
+						</div>
+					</div>
 				</div>
-			</div>
-
-			<h3 style={{ color: dayTime ? 'black' : 'whitesmoke', fontSize: '30px', marginBottom: -2 }}>
-				Tech Stack
-			</h3>
-			<hr
+				{/* <hr
 				style={{
 					width: '9rem',
 					borderColor: dayTime ? '#F5E186' : '#D9D9D9',
@@ -82,9 +79,9 @@ const AboutMe: React.FC<AboutComponents> = ({ dayTime }) => {
 					marginLeft: 0,
 					marginBottom: '2rem'
 				}}
-			/>
+			/> */}
 
-			<Typography m={1} sx={{ color: dayTime ? '#8B8B8B' : '#D9D9D9', marginLeft: 0 }}>
+				{/* <Typography m={1} sx={{ color: dayTime ? '#8B8B8B' : '#D9D9D9', marginLeft: 0 }}>
 				Languages
 			</Typography>
 			<div className="Tech-stack-holder">
@@ -138,8 +135,15 @@ const AboutMe: React.FC<AboutComponents> = ({ dayTime }) => {
 					<Logo image={github} />
 					<Logo image={aws} />
 					<Logo image={postgresql} />
-				</div>
+				</div> */}
+				{/* </div> */}
 			</div>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="white">
+				<path
+					fill="#F9F9F9"
+					fill-opacity="1"
+					d="M0,160L48,170.7C96,181,192,203,288,224C384,245,480,267,576,261.3C672,256,768,224,864,186.7C960,149,1056,107,1152,90.7C1248,75,1344,85,1392,90.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+			</svg>
 		</div>
 	);
 };

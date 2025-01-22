@@ -26,37 +26,40 @@ const Contact: React.FC<ContactProps> = ({ dayTime }) => {
 	};
 
 	const logoStyle: React.CSSProperties = {
-		display: 'block',
-		marginLeft: 'auto',
-		marginRight: 'auto',
-		marginBottom: '5rem'
+		// display: 'block',
+		// marginLeft: 'auto',
+		// marginRight: 'auto',
+		// marginBottom: '5rem'
+		height: '100px'
 	};
 	return (
-		<div className="Page-div">
-			<div className="title-div">
-				<h3
-					className="title"
-					style={{
-						color: dayTime ? 'black' : 'whitesmoke',
-						marginBottom: -2,
-						marginLeft: 0,
-						fontSize: '60px'
-					}}>
-					Contact
-				</h3>
-				<hr
-					style={{
-						width: '13.5rem',
-						borderColor: dayTime ? '#F5E186' : '#D9D9D9',
-						borderWidth: 2,
-						borderStyle: 'solid',
-						marginLeft: 0,
-						marginBottom: '2rem'
-					}}
-				/>
+		<div className="Page-div padding">
+			<div className="title-div"></div>
+			<div className="Contact-div">
+				<div className="contact-hold">
+					<p className="contact-header">Get in touch</p>
+					<p className="no-margin">360-790-6401</p>
+					<p className="no-margin">stephenshin1@hotmail.com</p>
+				</div>
+				<div className="contact-hold">
+					<p className="contact-header">Connect with me</p>
+
+					<a
+						href="https://www.linkedin.com/in/stephen-shin-680bb0201/"
+						target="_blank"
+						style={{ textDecoration: 'none' }}>
+						LinkedIn
+					</a>
+				</div>
+				<div className="contact-hold">
+					<p className="contact-header">Check out my code</p>
+					<a href="https://github.com/shinste/" target="_blank" style={{ textDecoration: 'none' }}>
+						GitHub
+					</a>
+				</div>
 			</div>
 
-			<div className="Contact-div animate">
+			{/* <div className="Contact-div animate">
 				<div style={{ ...panelStyle }}>
 					<img style={{ ...logoStyle }} src={dayTime ? phone : phoneGray} />
 					<h3 style={{ textAlign: 'center' }}>360-790-6401</h3>
@@ -96,7 +99,7 @@ const Contact: React.FC<ContactProps> = ({ dayTime }) => {
 						</Button>
 					</a>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

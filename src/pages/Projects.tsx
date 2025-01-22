@@ -10,34 +10,73 @@ import openai from '../logos/openai.svg';
 import postman from '../logos/postman.png';
 import aws from '../logos/aws.png';
 import Logo from '../components/Logo';
-import traveller from '../logos/traveller.gif';
+// import traveller from '../logos/traveller.gif';
 import firebase from '../logos/firebase.png';
 import spotifyPng from '../logos/spotify.png';
-import traveller2 from '../logos/traveller2.gif';
-import traveller3 from '../logos/traveller3.gif';
-
 import useIntersectionAnimation from '../hooks/useAnimate';
 import { useState } from 'react';
-
+import Spotify from '../logos/spotify-recommender.png';
+import Traveller from '../logos/traveller-application.png';
+import PFD from '../logos/pfd-application.png';
+import useProjectScroll from '../hooks/useProjectScroll';
+import TravellerShow from '../components/TravellerShow';
+import DentistryShow from '../components/DentistryShow';
+import SpotifyShow from '../components/SpotifyShow';
 interface ProjectComponents {
 	dayTime: boolean;
 }
 
 const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
-	const color = dayTime ? 'black' : 'whitesmoke';
-	const [travellerGif, setTravellerGif] = useState(0);
+	const [highlight, setHighlight] = useState(0);
 	useIntersectionAnimation();
+	useProjectScroll();
+
+	const handleHighlight = (index: number) => {
+		setHighlight(index);
+	};
+
 	return (
-		<div id="Projects-div">
-			<h3
-				className="Main-header Border-bottom"
-				style={{
-					color: dayTime ? 'black' : 'whitesmoke',
-					borderColor: dayTime ? '#F5E186' : '#D9D9D9'
-				}}>
-				Projects
-			</h3>
-			<div className="Grid" style={{ color: color }}>
+		<div id="projects-section">
+			<h3 className="project-header-1">PROJECTS</h3>
+			<h3 className="project-header-2">PROJECTS</h3>
+			<div className="big-circle" />
+			<div className="small-circle" />
+			<div id="projects-div" draggable="false">
+				<div className="hold-scroll">
+					<p id="scroll-to-view" className="animate">
+						Scroll To View &gt; &gt;
+					</p>
+				</div>
+				<div id="image-track" data-mouse-down-at="0" data-prev-percentage="0" draggable="false">
+					<img
+						className={`${highlight === 0 && 'highlight'} image `}
+						src={PFD}
+						alt="Spotify Application"
+						draggable="false"
+						onClick={() => handleHighlight(0)}
+					/>
+					<img
+						className={`image ${highlight === 1 && 'highlight'}`}
+						src={Spotify}
+						alt="Spotify Application"
+						draggable="false"
+						onClick={() => handleHighlight(1)}
+					/>
+					<img
+						className={`image ${highlight === 2 && 'highlight'}`}
+						src={Traveller}
+						alt="Spotify Application"
+						draggable="false"
+						onClick={() => handleHighlight(2)}
+					/>
+				</div>
+			</div>
+			{highlight === 0 && <DentistryShow />}
+			{highlight === 1 && <SpotifyShow />}
+
+			{highlight === 2 && <TravellerShow />}
+
+			{/* <div className="Grid" style={{ color: color }}>
 				<div className="Each-project animate">
 					<div className="Title-tools Vertical-flex">
 						<h2 className="Project-title">
@@ -291,7 +330,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 									gameplay.
 								</p>
 								<div className="Flex-center">
-									{/* <a href="https://main--pokerbot.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}> */}
+									{/* <a href="https://main--pokerbot.netlify.app/" target="_blank" style={{ textDecoration: 'none' }}> 
 									<Button
 										variant="contained"
 										sx={{
@@ -304,7 +343,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 										disabled>
 										Project
 									</Button>
-									{/* </a> */}
+									{/* </a>
 									<a
 										href="https://github.com/shinste/poker_bot_backend/"
 										target="_blank"
@@ -326,7 +365,7 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

@@ -14,7 +14,7 @@ function App() {
 	const [dayTime, setDayTime] = useState(true);
 	const body = document.body;
 	body.style.transition = 'background-color 4s ease';
-	document.body.style.backgroundColor = dayTime ? '#EEE5C7' : 'black';
+	document.body.style.backgroundColor = '#F9F9F9';
 	const hrStyle: React.CSSProperties = {
 		width: '70rem',
 		border: 'none',
@@ -26,16 +26,16 @@ function App() {
 	return (
 		<div>
 			<hr ref={componentRefs['Home']} style={{ borderStyle: 'none', margin: 0 }} />
-			<header>
+			{/* <header>
 				<NavBar handleButtonClick={handleButtonClick} detectNav={detectNav} dayTime={dayTime} />
-			</header>
+			</header> */}
 			<div>
 				<HomePage dayTime={dayTime} setDayTime={setDayTime} />
-				<hr ref={componentRefs['Projects']} style={{ ...hrStyle }} />
+				{/* <hr ref={componentRefs['Projects']} style={{ ...hrStyle }} /> */}
 				<Projects dayTime={dayTime} />
-				<hr ref={componentRefs['About Me']} style={{ ...hrStyle }} />
+				{/* <hr ref={componentRefs['About Me']} style={{ ...hrStyle }} /> */}
 				<AboutMe dayTime={dayTime} />
-				<hr ref={componentRefs['Contact']} style={{ ...hrStyle }} />
+				{/* <hr ref={componentRefs['Contact']} style={{ ...hrStyle }} /> */}
 				<Contact dayTime={dayTime} />
 			</div>
 			<hr style={{ borderStyle: 'none', marginTop: '6.7rem' }} />
