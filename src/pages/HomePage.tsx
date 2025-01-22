@@ -92,11 +92,11 @@ const HomePage: React.FC<HomePageComponents> = ({ dayTime, setDayTime }) => {
 			</svg>
 			<p id="about-me-p">
 				My name is Stephen! With an Economics degree from the University of Washington, I decided to
-				pursue my passion of software development. My specialty is working utilizing tools such as
-				React, TypeScript, and NextJS, and I enjoy working with UX/UI designers and backend
-				developers to create a perfect user experience!My favorite things about coding is finding
-				new ways to optimize my development process. A couple hobbies I have are playing volleyball,
-				lifting, and playing piano.
+				pursue my passion of software development. A couple of my specialty tools include React,
+				TypeScript, and NextJS, and I enjoy working with UX/UI designers and backend developers to
+				create a perfect user experience! My favorite things about coding is finding new ways to
+				optimize my development process. A couple hobbies I have are playing volleyball, lifting,
+				and playing piano.
 			</p>
 			<div id="one-sky">
 				<p className="one-sky-words Right-text">Currently working at</p>

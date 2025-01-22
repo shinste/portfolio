@@ -86,7 +86,7 @@ p {
 		opacity: 0;
 	}
 	to {
-		opacity: 0.3;
+		opacity: 0.8;
 	}
 }
 
@@ -807,7 +807,7 @@ body {
 	position: relative;
 	display: flex;
 	align-items: center;
-	margin-top: 15rem;
+	margin-top: 10rem;
 }
 
 #image-track {
@@ -826,8 +826,8 @@ div {
 }
 
 #image-track > .image {
-	width: 50vmin;
-	height: 40vmin;
+	width: 80vmin;
+	height: 50vmin;
 	object-fit: cover;
 	object-position: 50% 50%;
 	border-radius: 12px;
@@ -865,7 +865,7 @@ div {
 }
 
 #scroll-to-view.in-view {
-	animation: fade-in 3s;
+	animation: fade-in 2s;
 }
 
 .hold-scroll {
@@ -968,6 +968,7 @@ div {
 }
 
 .display-div {
+	margin-top: 5rem;
 	font-family: 'IBM Plex Mono';
 	font-weight: 300;
 }
@@ -992,6 +993,7 @@ div {
 .display-img {
 	width: 800px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+	z-index: 1;
 }
 .display-left {
 	margin-left: 40px;
@@ -1008,6 +1010,7 @@ div {
 	text-align: center;
 	margin-inline: auto;
 	font-size: 20px;
+	z-index: 1;
 }
 
 #hold-video {
