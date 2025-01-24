@@ -1,6 +1,5 @@
 export interface HomePageComponents {
-	dayTime: boolean;
-	setDayTime: React.Dispatch<React.SetStateAction<boolean>>;
+	scroll: (reference: string) => void;
 }
 
 export interface DayTimeProp {

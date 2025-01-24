@@ -7,14 +7,7 @@ import portrait from '../logos/portrait.jpg';
 import oneSky from '../logos/onesky.webp';
 
 //Homepage component
-const HomePage: React.FC<HomePageComponents> = ({ dayTime, setDayTime }) => {
-	const handleTransition = () => {
-		const sun = document.querySelector('.sun');
-		console.log(sun);
-		sun?.classList.toggle('move');
-		setDayTime(!dayTime);
-	};
-
+const HomePage: React.FC<HomePageComponents> = ({ scroll }) => {
 	return (
 		<div style={{ margin: 0, width: '100vw' }}>
 			{/* <div className="curved-upper">
@@ -50,24 +43,18 @@ const HomePage: React.FC<HomePageComponents> = ({ dayTime, setDayTime }) => {
 							</div>
 						</span>
 					</p>
-					{/* <p id="about-me-p">
-							My name is Stephen! I graduated with an Economics degree at the University of
-							Washington (Seattle), but shortly after graduation I decided to pursue my passion of
-							coding. I started my journey only wanting to develop backend, but after completing
-							many React projects, I've grown very fond of frontend as well! I now find myself
-							having more fun creating User Interfaces that provide a great experience! My favorite
-							things about coding is learning new tools to optimize my means of developing and the
-							satisfaction of being able to see what I've created. A couple hobbies I have are
-							playing volleyball, lifting, and playing videogames.
-						</p> */}
 					<p id="about-me-p">
 						{' '}
 						I work with Backend Engineers and UX/UI designers to deliver seamless functionality and
 						experience to the user.
 					</p>
 					<div id="hold-homepage">
-						<button className="homepage-buttons">Resume?</button>
-						<button className="homepage-buttons">Contact Me?</button>
+						<a href="resume.pdf" target="_blank" rel="noopener noreferrer">
+							<button className="homepage-buttons">Resume?</button>
+						</a>
+						<button className="homepage-buttons" onClick={() => scroll('Contact')}>
+							Contact Me?
+						</button>
 					</div>
 				</div>
 				<div className="align-self-center position-relative">

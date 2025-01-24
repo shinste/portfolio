@@ -10,6 +10,10 @@
 	box-sizing: border-box;
 }
 
+button {
+	cursor: pointer;
+}
+
 p {
 	font-family: 'Inter';
 }
@@ -196,6 +200,16 @@ p {
 	color: white;
 	font-size: 20px;
 	margin-inline: 10px;
+}
+
+.homepage-buttons:hover {
+	transform: scale(1.08);
+	transition: 1s all ease-in-out;
+}
+
+.homepage-buttons:hover {
+	transform: scale(1.08);
+	transition: 1s all ease-in-out;
 }
 
 @keyframes typing {
@@ -422,14 +436,14 @@ body {
 }
 
 #Homepage-div {
-	background-color: #fff6ea;
+	background-color: #ffebcf;
 	height: 80vh;
 	justify-content: center;
 	align-items: center;
 	display: flex;
 }
 .orange {
-	background-color: #fff6ea;
+	background-color: #ffebcf;
 }
 
 #intro {
@@ -897,7 +911,7 @@ div {
 .cover-line {
 	position: absolute;
 	width: 1px;
-	border: 2px solid #fff6ea;
+	border: 2px solid #ffebcf;
 	height: 400px;
 	left: 0;
 	animation: shift-up 1s ease-in-out forwards;
