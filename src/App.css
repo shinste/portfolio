@@ -579,6 +579,14 @@ body {
 	position: relative;
 	top: -80px;
 	margin-bottom: 0;
+	z-index: -1;
+}
+
+.project-header-1.in-view {
+	animation: jump-up 2s ease;
+}
+.project-header-2.in-view {
+	animation: jump-down 2s ease;
 }
 .project-header-2 {
 	font-size: 80px;
@@ -591,6 +599,7 @@ body {
 	left: 50%;
 	transform: translate(-50%, 0);
 	color: white;
+	z-index: 1;
 }
 
 .main-header {
@@ -973,12 +982,20 @@ div {
 	margin-left: 20px;
 }
 
+.display-text-div.in-view {
+	animation: slide-right 1s;
+}
+
 .display-text-div-right {
 	justify-content: start;
 	display: flex;
 	flex-direction: column;
 	align-items: end;
 	margin-right: 20px;
+}
+
+.display-text-div-right.in-view {
+	animation: slide-left 1s;
 }
 
 .display-div {
@@ -1029,6 +1046,40 @@ div {
 
 #hold-video {
 	justify-self: center;
+}
+@keyframes slide-right {
+	from {
+		margin-left: -100px;
+	}
+	to {
+		margin-left: 20px;
+	}
+}
+
+@keyframes slide-left {
+	from {
+		margin-right: -100px;
+	}
+	to {
+		margin-right: 20px;
+	}
+}
+@keyframes jump-up {
+	from {
+		top: -40px;
+	}
+	to {
+		top: -80px;
+	}
+}
+
+@keyframes jump-down {
+	from {
+		top: -55px;
+	}
+	to {
+		top: -15px;
+	}
 }
 @keyframes shift-up {
 	from {

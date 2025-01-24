@@ -37,8 +37,9 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 
 	return (
 		<div id="projects-section">
-			<h3 className="project-header-1">PROJECTS</h3>
-			<h3 className="project-header-2">PROJECTS</h3>
+			<h3 className="project-header-2 animate">PROJECTS</h3>
+
+			<h3 className="project-header-1 animate">PROJECTS</h3>
 			<div className="big-circle" />
 			<div className="small-circle" />
 			<div id="projects-div" draggable="false">
@@ -47,7 +48,12 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 						Scroll To View &gt; &gt;
 					</p>
 				</div>
-				<div id="image-track" data-mouse-down-at="0" data-prev-percentage="0" draggable="false">
+				<div
+					id="image-track"
+					data-mouse-down-at="0"
+					data-prev-percentage="0"
+					draggable="false"
+					data-percentage="0">
 					<img
 						className={`${highlight === 0 && 'highlight'} image `}
 						src={PFD}

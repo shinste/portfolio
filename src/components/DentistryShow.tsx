@@ -8,7 +8,7 @@ const DentistryShow = () => {
 			<div className="display-flex">
 				<div className="display-left Flex">
 					<img src={dentistryHomepage} className="display-img" />
-					<div className="display-text-div">
+					<div className="display-text-div animate">
 						<p className=" display-sub">SEO and Best Practices</p>
 						<p className="w-50">
 							Optimizing internal structure and prioritizing the correct information leads to high
@@ -17,7 +17,7 @@ const DentistryShow = () => {
 					</div>
 				</div>
 				<div className="display-right Flex">
-					<div className="display-text-div-right">
+					<div className="display-text-div-right animate">
 						<p className=" display-sub Right-text">Functional and Reliable Components</p>
 						<p className="w-50 Right-text">
 							Providing functional and easy-to-use contact forms can cultivate great user experience
@@ -28,7 +28,7 @@ const DentistryShow = () => {
 				</div>
 				<div className="display-left Flex">
 					<img src={dentistryAbout} className="display-img" />
-					<div className="display-text-div">
+					<div className="display-text-div animate">
 						<p className=" display-sub">APIs and Navigation</p>
 						<p className="w-50">
 							API handling can help create many utilities for the user, while simplified navigation
