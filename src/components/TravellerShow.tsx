@@ -8,7 +8,7 @@ const TravellerShow = () => {
 			<div className="display-flex">
 				<div className="display-left Flex">
 					<img src={travellerLogin} className="display-img" />
-					<div className="display-text-div">
+					<div className="display-text-div animate">
 						<p className=" display-sub">Easy Login and Registration</p>
 						<p className="w-50">
 							Using Google Firebase’s OAuth, this project aims to keep allow joining and logging
@@ -17,7 +17,7 @@ const TravellerShow = () => {
 					</div>
 				</div>
 				<div className="display-right Flex">
-					<div className="display-text-div-right">
+					<div className="display-text-div-right animate">
 						<p className=" display-sub Right-text">Quickly Edit and Organize Events</p>
 						<p className="w-50 Right-text">
 							Create events that you can visualize and edit on our calendar. Any creation or edit of
@@ -28,7 +28,7 @@ const TravellerShow = () => {
 				</div>
 				<div className="display-left Flex">
 					<img src={travellerItinerary} className="display-img" />
-					<div className="display-text-div">
+					<div className="display-text-div animate">
 						<p className=" display-sub">Easy Login and Registration</p>
 						<p className="w-50">
 							Using Google Firebase’s OAuth, this project aims to keep allow joining and logging

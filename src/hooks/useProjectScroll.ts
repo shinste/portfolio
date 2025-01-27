@@ -23,7 +23,7 @@ const useProjectScroll = () => {
 			};
 			window.onmousemove = (e) => {
 				if (track.dataset.mouseDownAt !== '0') {
-					const mouseDownAt = track?.dataset.mouseDownAt;
+					const mouseDownAt = track.dataset.mouseDownAt;
 					const prevPercentage = track.dataset.prevPercentage;
 					if (mouseDownAt !== undefined && prevPercentage !== undefined) {
 						const mouseDelta = parseFloat(mouseDownAt) - e.clientX;
