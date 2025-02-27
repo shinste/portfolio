@@ -486,6 +486,7 @@ body {
 }
 
 .padding {
+	padding-top: 20rem;
 	padding-inline: 200px;
 }
 
@@ -607,6 +608,7 @@ body {
 	width: fit-content;
 	font-family: 'Inter';
 	margin-top: -250px;
+	margin-inline: auto;
 }
 
 #tech-text {
@@ -667,6 +669,24 @@ body {
 	animation: slide-from-left 1s ease;
 } */
 
+.Logo {
+	background-color: white;
+	padding: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	min-width: 100px;
+	margin-inline: 12px;
+	border-radius: 5px;
+}
+
+.Logo:hover {
+	transform: scale(1.08);
+	transition: 0.05s all ease-in-out;
+}
+
 .Display-options {
 	display: flex;
 	justify-content: space-evenly;
@@ -705,9 +725,16 @@ body {
 .w-70 {
 	width: 70%;
 }
+.w-90 {
+	width: 90%;
+}
 #line-left {
 	margin-left: 0;
 	/* margin-right: 4.65rem; */
+}
+
+.pb-10 {
+	padding-bottom: 10px;
 }
 
 #line-right {
