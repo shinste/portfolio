@@ -1,7 +1,9 @@
+import useIntersectionAnimation from '../hooks/useAnimate';
 import travellerLogin from '../logos/traveller-application.png';
 import travellerCalendar from '../logos/traveller_calendar.png';
 import travellerItinerary from '../logos/traveller_itinerary.png';
 const TravellerShow = () => {
+	useIntersectionAnimation();
 	return (
 		<div className="display-div">
 			<h3 className="display-header">Travel Planning Application</h3>
