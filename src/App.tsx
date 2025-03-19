@@ -13,8 +13,8 @@ import useScroll from './hooks/useScroll';
 function App() {
 	const [dayTime, setDayTime] = useState(true);
 	const body = document.body;
-	body.style.transition = 'background-color 4s ease';
-	document.body.style.backgroundColor = '#F9F9F9';
+	// body.style.transition = 'background-color 4s ease';
+	// document.body.style.backgroundColor = '#F9F9F9';
 	const hrStyle: React.CSSProperties = {
 		border: 'none'
 	};
@@ -23,18 +23,12 @@ function App() {
 
 	return (
 		<div>
-			<hr ref={componentRefs['Home']} style={{ borderStyle: 'none', margin: 0 }} />
-
 			<div>
 				<HomePage scroll={handleButtonClick} />
-				{/* <hr ref={componentRefs['Projects']} style={{ ...hrStyle }} /> */}
 				<Projects dayTime={dayTime} />
-				{/* <hr ref={componentRefs['About Me']} style={{ ...hrStyle }} /> */}
 				<AboutMe dayTime={dayTime} />
-				<hr ref={componentRefs['Contact']} style={{ ...hrStyle }} />
 				<Contact dayTime={dayTime} />
 			</div>
-			<hr style={{ borderStyle: 'none', marginTop: '6.7rem' }} />
 		</div>
 	);
 }

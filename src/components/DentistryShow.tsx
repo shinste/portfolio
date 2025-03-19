@@ -14,6 +14,11 @@ const DentistryShow = () => {
 							Optimizing internal structure and prioritizing the correct information leads to high
 							SEO rankings that will help this website flourish in google ratings
 						</p>
+						<a target="_blank" href="https://dentistryintacoma.com">
+							<button className="pfd-button">
+								<p style={{ padding: 0 }}>View Website</p>
+							</button>
+						</a>
 					</div>
 				</div>
 				<div className="display-right Flex">

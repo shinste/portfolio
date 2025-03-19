@@ -193,7 +193,7 @@ p {
 	padding-right: 0.5rem; */
 	padding-left: 0.8rem;
 	padding-right: 0.8rem;
-	border-radius: 24px;
+	border-radius: 12px;
 	box-shadow: none;
 	border: none;
 	background-color: #85bcc7;
@@ -462,6 +462,7 @@ body {
 	width: 50vw;
 	margin-inline: auto;
 	justify-content: space-between;
+	padding: 1%;
 }
 .Contact-div.in-view {
 	animation: appear 3s ease;
@@ -564,7 +565,13 @@ body {
 	margin-top: 20rem;
 	position: relative;
 	width: 100vw;
+	height: fit-content;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.classic-button {
+	text-decoration: none;
+	background-color: #006a80;
 }
 
 .Border-bottom {
@@ -698,13 +705,16 @@ body {
 	padding: 3px;
 }
 
-.Bland-button {
+.pfd-button {
 	margin: 0;
-	padding: 0;
+	padding-inline: 10px;
+	padding-top: 0px;
 	border: none;
-	background: none;
-	text-decoration: none;
+	background-color: #006a80;
 	cursor: pointer;
+	box-shadow: none;
+	border: none;
+	border-radius: 12px;
 }
 
 .line {

@@ -38,7 +38,6 @@ const Projects: React.FC<ProjectComponents> = ({ dayTime }) => {
 	return (
 		<div id="projects-section">
 			<h3 className="project-header-2 animate">PROJECTS</h3>
-
 			<h3 className="project-header-1 animate">PROJECTS</h3>
 			<div className="big-circle" />
 			<div className="small-circle" />

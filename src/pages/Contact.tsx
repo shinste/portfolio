@@ -33,8 +33,7 @@ const Contact: React.FC<ContactProps> = ({ dayTime }) => {
 		height: '100px'
 	};
 	return (
-		<div className="Page-div padding">
-			<div className="title-div"></div>
+		<div className="Page-div">
 			<div className="Contact-div">
 				<div className="contact-hold">
 					<p className="contact-header">Get in touch</p>
