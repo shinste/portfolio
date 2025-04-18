@@ -36,7 +36,7 @@ const HomePage: React.FC<HomePageComponents> = ({ scroll }) => {
 							<hr className="line " id="line-right" />
 						</div> */}
 					<p id="intro">
-						Hello, I'm <span style={{ backgroundColor: '#85BCC7' }}>Stephen</span>, a{' '}
+						Hello, I'm <span style={{ backgroundColor: '#85BCC7' }}>Stesdfsdfsdphen</span>, a{' '}
 						<span>
 							<div id="hold-name-line">
 								frontend developer <hr className="horizontal-2" />
